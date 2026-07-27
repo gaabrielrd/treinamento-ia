@@ -34,7 +34,9 @@ Fontes oficiais por bloco — prompting, `AGENTS.md`, skills, MCP e escolha de m
 
 | Arquivo                                                              | Slide      | Duração |
 | -------------------------------------------------------------------- | ---------- | ------- |
-| [slide-13-reescrever-prompt.md](atividades/slide-13-reescrever-prompt.md) | 13     | 13 min  |
+| [pratica-prompt-executado.md](atividades/pratica-prompt-executado.md) | **Bloco 3** | 25 min |
+| [pratica-agents-md.md](atividades/pratica-agents-md.md) | **Bloco 5** | 12 min |
+| [slide-13-reescrever-prompt.md](atividades/slide-13-reescrever-prompt.md) | absorvido pela Prática A | — |
 | [opcao-a-criar-uma-skill.md](atividades/opcao-a-criar-uma-skill.md)   | Opcional A | 20 min  |
 
 ---
@@ -58,6 +60,35 @@ Fontes oficiais por bloco — prompting, `AGENTS.md`, skills, MCP e escolha de m
 5. Este guia
 
 ---
+
+## Agenda
+
+| Bloco | Tema | Duração |
+| ----- | ---- | ------: |
+| 1 | Ciclo do agente e por que erram | 18 min |
+| 2 | Anatomia do prompt + vago × estruturado | 25 min |
+| 3 | **Prática A — escrever o prompt e executar** | 25 min |
+| 4 | Contexto persistente: `AGENTS.md` e `CLAUDE.md` | 20 min |
+| 5 | **Prática B — escrever o `AGENTS.md`** | 12 min |
+| 6 | Skills | 15 min |
+| 7 | Além do prompt: MCP e escolha de modelo | 15 min |
+| 8 | Encerramento | 10 min |
+
+Duas coisas a saber sobre esta agenda:
+
+- **MCP e escolha de modelo estão juntos, em 15 minutos, em nível de consciência.** Ninguém desta turma vai configurar um servidor MCP no mês seguinte. O que precisa levar é a pergunta *"o que essa integração pode acessar e alterar?"*, o checklist de segurança e a matriz de modelo. **Não faça demonstração de MCP ao vivo** — o custo/benefício não fecha em duas horas.
+- **Os minutos liberados viraram prática.** O dia é sobre conduzir um agente; era o único em que ninguém conduzia nenhum. As folhas são [pratica-prompt-executado.md](atividades/pratica-prompt-executado.md) e [pratica-agents-md.md](atividades/pratica-agents-md.md).
+
+## Resultado observável
+
+Confira por dupla antes de encerrar:
+
+- [ ] `AGENTS.md` commitado no repositório do projeto
+- [ ] um plano gerado pelo agente, revisado, com arquivos afetados e critérios
+- [ ] `git status` confirma que nada foi alterado durante o planejamento
+- [ ] **a dupla aponta, no plano, uma suposição do agente que estava errada**
+
+O último item é o que importa: os outros três mostram que seguiram o procedimento, esse mostra que revisaram.
 
 ## A espinha dorsal do dia
 

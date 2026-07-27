@@ -11,6 +11,33 @@ O produto é o TaskWeather do roteiro: identificação por e-mail, tarefas e cli
 
 As fontes para aprofundar cada bloco, e as três leituras para enviar à turma antes da sessão, estão em [referencias.md](referencias.md).
 
+## Agenda
+
+| Bloco | Tema | Duração |
+| ----- | ---- | ------: |
+| 1 | Abertura + **demonstração do vazamento de dados** | 13 min |
+| 2 | Processo, definir problema, escopo e não escopo | 23 min |
+| 3 | **Prática A — PRD do próprio projeto** | 15 min |
+| 4 | Critérios de aceite e dividir em tarefas | 18 min |
+| 5 | **Prática B — completar o PRD** | 12 min |
+| 6 | Estrutura, documentação e validação local | 22 min |
+| 7 | **Versionar o PRD + primeiro contato com o agente** | 17 min |
+
+O dia converge para um artefato: o `docs/prd.md` de um projeto real da dupla, commitado. Folha das práticas em [atividades/pratica-prd-da-dupla.md](atividades/pratica-prd-da-dupla.md).
+
+**A demonstração do vazamento de dados abre o dia** — não é mais bloco opcional. Roteiro na seção "Bloco opcional A" mais abaixo; os quatro passos estão em "Duas demonstrações de defeito".
+
+## Resultado observável
+
+Confira por dupla antes de encerrar:
+
+- [ ] `docs/prd.md` commitado, com problema, escopo, não escopo, critérios e tarefas
+- [ ] pelo menos dois critérios por funcionalidade
+- [ ] nenhum critério com "fácil", "rápido", "bonito", "moderno" ou "seguro"
+- [ ] ao menos um critério de caso de erro
+- [ ] a dupla rodou os comandos de validação e sabe reconhecer uma falha
+- [ ] a dupla nomeia uma lacuna que o agente apontou no PRD
+
 ## Preparação antes da sessão
 
 ```bash

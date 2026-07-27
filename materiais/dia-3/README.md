@@ -44,16 +44,22 @@ Documentação do stack por etapa da prática: Vite, React, TypeScript, Open-Met
 
 ## Agenda
 
-| Etapa | Atividade                          | Duração | Checkpoint |
-| ----- | ---------------------------------- | ------: | ---------- |
-| 1     | Abertura, resultado e regras        | 10 min  | —          |
-| 2     | Criar projeto e executar template   | 10 min  | 0          |
-| 3     | Planejar a implementação            | 10 min  | 1          |
-| 4     | Implementar identificação por e-mail | 20 min  | 2          |
-| 5     | Implementar lista de tarefas        | 30 min  | 3          |
-| 6     | Integrar widget meteorológico       | 20 min  | 4          |
-| 7     | Validar, revisar e documentar       | 15 min  | 5          |
-| 8     | Demonstração e retrospectiva        | 5 min   | —          |
+| Etapa | Atividade | Duração | Checkpoint |
+| ----- | --------- | ------: | ---------- |
+| 1 | Abertura e regras | 8 min | — |
+| 2 | Criar projeto e executar template | 10 min | 0 |
+| 3 | Planejar — reusando o plano do Dia 2 | 8 min | 1 |
+| 4 | Entrada por e-mail | 20 min | 2 |
+| 5 | Lista de tarefas | 25 min | 3 |
+| 6 | **Separação de dados por usuário** | 15 min | 4 |
+| 7 | Validar, revisar e documentar | 20 min | 5 |
+| 8 | **Demonstração cruzada** e retrospectiva | 14 min | — |
+
+**O clima saiu do escopo obrigatório** e virou o Bloco opcional 5. Custava 20 minutos e uma dependência de rede, e a lição que trazia — chamada externa isolada em serviço — é a mesma do armazenamento isolado que a turma acabou de fazer. Entregue-a em três minutos projetando o `weatherApi.ts` da solução de referência.
+
+**A separação de dados virou incremento próprio.** É o único momento em que a turma vê uma decisão de arquitetura ter consequência visível: o mesmo vazamento que abriu o Dia 1, agora prevenido por ela.
+
+Os 20 minutos ganhos foram para validação, revisão e fechamento — onde o processo se consolida.
 
 ---
 
@@ -89,9 +95,17 @@ Estes três merecem parar a turma inteira por dois minutos:
 
 ---
 
-## Retrospectiva final (5 min)
+## Demonstração cruzada e retrospectiva (14 min)
 
-Selecione um ou dois grupos para mostrar rapidamente: a aplicação, a estrutura das features, um commit e o resultado dos testes.
+**Demonstração cruzada (9 min).** Em vez de um ou dois voluntários apresentarem para a sala, cada dupla mostra a aplicação para a dupla vizinha, em 3 minutos, seguindo o fluxo manual final. Depois trocam. Todos apresentam, todos revisam, e você observa mais circulando entre pares do que assistindo a dois voluntários.
+
+**O teste que fecha o treinamento (5 min).** Passe em cada dupla e pergunte, sem deixar abrir o código:
+
+1. Onde fica a regra de e-mail válido?
+2. Onde fica a chave que separa os dados de cada usuário?
+3. Se trocássemos o `localStorage` por um banco, quantos arquivos mudariam?
+
+Quem responde as três, aprendeu a estrutura. Quem não responde tem uma aplicação que o agente construiu — melhor descobrir agora que na próxima demanda.
 
 Depois conduza:
 

@@ -16,20 +16,20 @@ A aplicação **TaskWeather** terá:
 
 ### Obrigatório
 
-- login simulado;
+- entrada informando **apenas o e-mail**, sem senha;
 - sessão local;
 - logout;
 - criação de tarefas;
 - listagem de tarefas;
 - conclusão de tarefas;
 - persistência local;
-- busca de clima atual por cidade;
-- estados de carregamento e erro;
+- **separação dos dados por usuário**: as tarefas de um e-mail não aparecem para outro;
 - validação local;
 - documentação mínima.
 
 ### Opcional, somente se houver tempo
 
+- busca de clima atual por cidade, com estados de carregamento e erro;
 - editar tarefa;
 - excluir tarefa;
 - filtrar tarefas;
@@ -42,6 +42,7 @@ A aplicação **TaskWeather** terá:
 - backend;
 - banco de dados;
 - autenticação real;
+- senha;
 - cadastro;
 - recuperação de senha;
 - informações sensíveis;
@@ -71,23 +72,31 @@ Cada participante ou grupo deve possuir:
 - manter prompts prontos para copiar;
 - testar previamente a API meteorológica;
 - garantir que a API não exija segredo no navegador;
-- definir credenciais fake;
+- confirmar que cada dupla chega com o `docs/prd.md`, o `AGENTS.md` e o plano dos Dias 1 e 2;
 - preparar uma lista de erros comuns;
 - ter uma branch pronta após cada etapa caso algum grupo fique bloqueado.
 
 ## 5. Agenda-base de 120 minutos
 
-| Etapa | Atividade | Duração |
-|---|---|---:|
-| 1 | Abertura, resultado esperado e regras | 10 min |
-| 2 | Criar projeto e executar template | 10 min |
-| 3 | Planejar a implementação | 10 min |
-| 4 | Implementar login simulado | 20 min |
-| 5 | Implementar lista de tarefas | 30 min |
-| 6 | Integrar widget meteorológico | 20 min |
-| 7 | Validar, revisar e documentar | 15 min |
-| 8 | Demonstração e retrospectiva | 5 min |
-| **Total** |  | **120 min** |
+| Etapa | Atividade | Duração | Checkpoint |
+|---|---|---:|---|
+| 1 | Abertura e regras | 8 min | — |
+| 2 | Criar projeto e executar template | 10 min | 0 |
+| 3 | Planejar — reusando o plano do Dia 2 | 8 min | 1 |
+| 4 | Entrada por e-mail | 20 min | 2 |
+| 5 | Lista de tarefas | 25 min | 3 |
+| 6 | **Separação de dados por usuário** | 15 min | 4 |
+| 7 | Validar, revisar e documentar | 20 min | 5 |
+| 8 | **Demonstração cruzada** e retrospectiva | 14 min | — |
+| **Total** |  | **120 min** |  |
+
+Três mudanças em relação a uma agenda com três features obrigatórias:
+
+1. **O clima saiu do escopo obrigatório** e virou o Bloco opcional 5. Ele custava 20 minutos e uma dependência de rede, e a lição que trazia — chamada externa isolada em um serviço, com estados de erro — é conceitualmente a mesma do armazenamento isolado que a turma acabou de fazer nas tarefas. Você entrega essa lição em três minutos projetando o `weatherApi.ts` da solução de referência.
+2. **A separação de dados por usuário virou incremento próprio.** É o único momento em que a turma vê uma decisão de arquitetura ter consequência visível — o mesmo vazamento que abriu o Dia 1, agora prevenido por ela.
+3. **A etapa 3 encurtou porque o plano já existe.** As duplas chegam com o plano gerado e revisado no Dia 2; aqui apenas o confirmam contra o template.
+
+Os 20 minutos ganhos foram para **validar, revisar e documentar** e para a **demonstração cruzada** — onde o processo se consolida, e onde antes havia 20 minutos para os dois.
 
 ---
 
@@ -690,14 +699,21 @@ Três perguntas:
 2. Onde o processo evitou um problema?
 3. O que deve ser melhorado no template?
 
-### Roteiro
+### Roteiro — demonstração cruzada (9 min)
 
-Selecionar um ou dois grupos para mostrar rapidamente:
+Em vez de um ou dois voluntários apresentarem para a sala, **cada dupla mostra a aplicação para a dupla vizinha, em 3 minutos**, seguindo o fluxo manual final. Depois trocam.
 
-- aplicação;
-- estrutura das features;
-- um commit;
-- resultado dos testes.
+Todos apresentam, todos revisam, e você observa muito mais circulando entre pares do que assistindo a dois voluntários.
+
+### O teste que fecha o treinamento (5 min)
+
+Passe em cada dupla e pergunte, **sem deixar abrir o código**:
+
+1. Onde fica a regra de e-mail válido?
+2. Onde fica a chave que separa os dados de cada usuário?
+3. Se trocássemos o `localStorage` por um banco de dados, quantos arquivos mudariam?
+
+Quem responde as três, aprendeu a estrutura. Quem não responde tem uma aplicação que o agente construiu — e é melhor descobrir isso agora do que na próxima demanda.
 
 Conduzir a retrospectiva:
 
@@ -740,6 +756,12 @@ Usar a skill `accessibility-review` para verificar:
 - contraste;
 - semântica.
 
+## Bloco opcional 5 — Widget meteorológico — 20 minutos
+
+A integração externa, agora fora do escopo obrigatório. Prompt e critérios seguem em `materiais/dia-3/prompts/prompts-para-copiar.md`.
+
+Se não houver tempo, entregue a lição em três minutos projetando `features/weather/services/weatherApi.ts` da solução de referência: a chamada externa isolada em um serviço, a resposta validada antes de ser devolvida e os quatro estados de tela.
+
 ## Bloco opcional 4 — Teste adicional — 15 minutos
 
 Adicionar um teste de integração para o fluxo crítico de tarefas.
@@ -760,9 +782,11 @@ Adicionar um teste de integração para o fluxo crítico de tarefas.
 - critérios por incremento;
 - não escopo preservado.
 
-## Checkpoint 2 — Login
+## Checkpoint 2 — Entrada por e-mail
 
-- sucesso, erro, persistência e logout;
+- e-mail válido entra; vazio ou inválido é recusado com mensagem;
+- a tela não pede senha;
+- persistência da sessão e logout funcionando;
 - commit criado.
 
 ## Checkpoint 3 — Tarefas
@@ -771,7 +795,15 @@ Adicionar um teste de integração para o fluxo crítico de tarefas.
 - login preservado;
 - commit criado.
 
-## Checkpoint 4 — Clima
+## Checkpoint 4 — Separação de dados
+
+- tarefas de um e-mail não aparecem para outro;
+- ao voltar ao e-mail anterior, as tarefas dele reaparecem;
+- a chave de armazenamento inclui o e-mail e é montada em um único arquivo;
+- sair não apaga dados de ninguém;
+- commit criado.
+
+## Checkpoint 4b — Clima (apenas se o bloco opcional for feito)
 
 - loading, sucesso e erro;
 - nenhuma credencial real;
@@ -795,7 +827,8 @@ A prática é considerada concluída quando o grupo:
 - revisou alterações;
 - registrou commits;
 - documentou como executar e testar;
-- consegue explicar a estrutura do projeto.
+- consegue explicar a estrutura do projeto;
+- **responde às três perguntas de arquitetura sem abrir o código.**
 
 # 11. Erros que não devem consumir o treinamento
 

@@ -13,16 +13,17 @@ const cap = K.bannerSlide(p, {
 cap.addNotes("Objetivo do dia: ensinar como orientar agentes de código, fornecer contexto persistente e escolher ferramentas de forma proporcional à tarefa. No Dia 1 definimos um processo; hoje aprendemos a comunicá-lo ao agente.");
 
 // ---------------- AGENDA ----------------
-const sa = K.contentSlide(p, 2, "00 · Agenda", "Agenda do dia", "7 blocos · 120 minutos (base) · até 180 min com demonstrações adicionais.");
+const sa = K.contentSlide(p, 2, "00 · Agenda", "Agenda do dia", "8 blocos · 120 minutos · duas práticas com o agente.");
 K.table(sa, [
   [K.TABLE.header("Bloco"), K.TABLE.header("Tema"), K.TABLE.header("Duração")],
-  [K.TABLE.accent("1"), K.TABLE.cell("Como agentes trabalham e por que erram"), K.TABLE.muted("20 min")],
-  [K.TABLE.accent("2"), K.TABLE.cell("Prompts eficientes"), K.TABLE.muted("22 min")],
-  [K.TABLE.accent("3"), K.TABLE.cell("Contexto persistente"), K.TABLE.muted("22 min")],
-  [K.TABLE.accent("4"), K.TABLE.cell("Skills"), K.TABLE.muted("20 min")],
-  [K.TABLE.accent("5"), K.TABLE.cell("MCP e segurança"), K.TABLE.muted("10 min")],
-  [K.TABLE.accent("6"), K.TABLE.cell("Modelos e raciocínio"), K.TABLE.muted("8 min")],
-  [K.TABLE.accent("7"), K.TABLE.cell("Exercício e encerramento"), K.TABLE.muted("18 min")],
+  [K.TABLE.accent("1"), K.TABLE.cell("Ciclo do agente e por que erram"), K.TABLE.muted("18 min")],
+  [K.TABLE.accent("2"), K.TABLE.cell("Anatomia do prompt + vago × estruturado"), K.TABLE.muted("25 min")],
+  [K.TABLE.accent("3"), K.TABLE.cell("Prática: escrever o prompt e executar"), K.TABLE.muted("25 min")],
+  [K.TABLE.accent("4"), K.TABLE.cell("Contexto persistente: AGENTS.md e CLAUDE.md"), K.TABLE.muted("20 min")],
+  [K.TABLE.accent("5"), K.TABLE.cell("Prática: escrever o AGENTS.md do projeto"), K.TABLE.muted("12 min")],
+  [K.TABLE.accent("6"), K.TABLE.cell("Skills"), K.TABLE.muted("15 min")],
+  [K.TABLE.accent("7"), K.TABLE.cell("Além do prompt: MCP e escolha de modelo"), K.TABLE.muted("15 min")],
+  [K.TABLE.accent("8"), K.TABLE.cell("Encerramento"), K.TABLE.muted("10 min")],
   [K.TABLE.cell("", true), K.TABLE.cell("Total", true), K.TABLE.accent("120 min")]
 ], { x: T.MX, y: 2.35, colW: [1.3, 8.4, 2.4], rowH: 0.46 });
 sa.addNotes("Resultados esperados: explicar o ciclo do agente; reconhecer solicitações vagas; montar prompt com contexto/objetivo/escopo/restrições/critérios; entender AGENTS.md e CLAUDE.md; entender skills e MCP; aplicar segurança a integrações; escolher modelo e raciocínio conforme ambiguidade e impacto.");

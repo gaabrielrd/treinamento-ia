@@ -20,11 +20,10 @@ const se = K.contentSlide(p, 2, "00 · Escopo", "Escopo da aplicação", "O que 
     "Dados separados por usuário",
     "Criar, listar e concluir tarefas",
     "Persistência local",
-    "Clima atual por cidade",
-    "Estados de carregamento e erro",
     "Validação local e documentação mínima"
   ], { tag: "Entra agora", accent: true, bodySize: 12, gap: 6 });
   C.infoCard(se, T.MX + w + gap, 2.55, w, 3.85, "Opcional (se houver tempo)", [
+    "Clima atual, com loading e erro",
     "Editar e excluir tarefa",
     "Filtrar tarefas",
     "Testes adicionais",
@@ -44,14 +43,14 @@ se.addNotes("Pré-requisitos: acesso ao GitHub, agente instalado e autenticado, 
 const sa = K.contentSlide(p, 3, "00 · Agenda", "Agenda-base de 120 minutos", "Introdução curta e execução prática guiada, em checkpoints comuns.");
 K.table(sa, [
   [K.TABLE.header("Etapa"), K.TABLE.header("Atividade"), K.TABLE.header("Duração")],
-  [K.TABLE.accent("1"), K.TABLE.cell("Abertura, resultado esperado e regras"), K.TABLE.muted("10 min")],
+  [K.TABLE.accent("1"), K.TABLE.cell("Abertura e regras"), K.TABLE.muted("8 min")],
   [K.TABLE.accent("2"), K.TABLE.cell("Criar projeto e executar template"), K.TABLE.muted("10 min")],
-  [K.TABLE.accent("3"), K.TABLE.cell("Planejar a implementação"), K.TABLE.muted("10 min")],
-  [K.TABLE.accent("4"), K.TABLE.cell("Implementar entrada por e-mail"), K.TABLE.muted("20 min")],
-  [K.TABLE.accent("5"), K.TABLE.cell("Implementar lista de tarefas"), K.TABLE.muted("30 min")],
-  [K.TABLE.accent("6"), K.TABLE.cell("Integrar widget meteorológico"), K.TABLE.muted("20 min")],
-  [K.TABLE.accent("7"), K.TABLE.cell("Validar, revisar e documentar"), K.TABLE.muted("15 min")],
-  [K.TABLE.accent("8"), K.TABLE.cell("Demonstração e retrospectiva"), K.TABLE.muted("5 min")]
+  [K.TABLE.accent("3"), K.TABLE.cell("Planejar — reusando o plano do Dia 2"), K.TABLE.muted("8 min")],
+  [K.TABLE.accent("4"), K.TABLE.cell("Entrada por e-mail"), K.TABLE.muted("20 min")],
+  [K.TABLE.accent("5"), K.TABLE.cell("Lista de tarefas"), K.TABLE.muted("25 min")],
+  [K.TABLE.accent("6"), K.TABLE.cell("Separação de dados por usuário"), K.TABLE.muted("15 min")],
+  [K.TABLE.accent("7"), K.TABLE.cell("Validar, revisar e documentar"), K.TABLE.muted("20 min")],
+  [K.TABLE.accent("8"), K.TABLE.cell("Demonstração cruzada e retrospectiva"), K.TABLE.muted("14 min")]
 ], { x: T.MX, y: 2.35, colW: [1.3, 8.4, 2.4], rowH: 0.46 });
 sa.addNotes("Grupos: preferir duplas, evitar mais de três. Uma pessoa conduz o agente, outra lê critérios e acompanha o escopo; alternar após o login. Contingência: grupo bloqueado por mais de 5 min → conferir ambiente, comparar com checkpoint, aplicar correção mínima, se necessário usar branch de referência.");
 

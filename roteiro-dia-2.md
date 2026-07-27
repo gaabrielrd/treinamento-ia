@@ -30,20 +30,32 @@ Ao final do dia, o participante deverá conseguir:
 - preparar uma demonstração MCP segura e preferencialmente somente leitura;
 - preparar uma pequena alteração que permita mostrar análise, plano, implementação e validação;
 - garantir que nenhuma credencial real seja exibida;
-- deixar um prompt reserva caso a demonstração ao vivo falhe.
+- deixar um prompt reserva caso a demonstração ao vivo falhe;
+- confirmar que cada dupla chega com o `docs/prd.md` do Dia 1 e com o agente autenticado;
+- ter um PRD de reserva para a dupla que faltou ao Dia 1.
 
 ## 4. Agenda-base
 
-| Bloco | Tema | Duração |
-|---|---|---:|
-| 1 | Como agentes trabalham e por que erram | 20 min |
-| 2 | Prompts eficientes | 22 min |
-| 3 | Contexto persistente | 22 min |
-| 4 | Skills | 20 min |
-| 5 | MCP e segurança | 10 min |
-| 6 | Modelos e raciocínio | 8 min |
-| 7 | Exercício e encerramento | 18 min |
-| **Total** |  | **120 min** |
+| Bloco | Tema | Duração | Slides |
+|---|---|---:|---|
+| 1 | Ciclo de trabalho do agente e por que erram | 18 min | 1–3 |
+| 2 | Anatomia do prompt + do pedido vago ao executável | 25 min | 4–5 |
+| 3 | **Prática A — escrever o prompt e executar** | 25 min | — |
+| 4 | Contexto persistente: `AGENTS.md` e `CLAUDE.md` | 20 min | 6–8 |
+| 5 | **Prática B — escrever o `AGENTS.md` do projeto** | 12 min | — |
+| 6 | Skills | 15 min | 9–10 |
+| 7 | Além do prompt: MCP e escolha de modelo | 15 min | 11–12 |
+| 8 | Encerramento | 10 min | 14 |
+| **Total** |  | **120 min** |  |
+
+Duas mudanças em relação a uma agenda de sete blocos expositivos:
+
+1. **MCP e escolha de modelo foram unidos em um bloco de 15 minutos**, em nível de consciência, não de operação. Ninguém desta turma vai configurar um servidor MCP no mês seguinte; o que precisa levar é a pergunta *“o que essa integração pode acessar e alterar?”*, o checklist de segurança e a matriz de modelo. **Não faça demonstração de MCP ao vivo** — o custo/benefício não fecha em duas horas.
+2. **Os 18 minutos liberados viraram prática com o agente.** O dia é inteiramente sobre conduzir um agente; era o único em que ninguém conduzia nenhum.
+
+O dia converge para dois artefatos: **o `AGENTS.md` do projeto da dupla** e **um plano gerado pelo agente, revisado**. Os dois são a entrada do Dia 3.
+
+O exercício de reescrever prompt no papel (Slide 13) foi absorvido pela Prática A, onde o prompt é escrito **e executado**.
 
 ---
 
@@ -679,6 +691,85 @@ Amanhã vamos utilizar essas camadas para criar uma aplicação a partir do temp
 
 ---
 
+---
+
+# 5b. Blocos de prática
+
+## Prática A — Escrever o prompt e executar
+
+**Bloco 3 · 25 minutos · em duplas**
+
+A turma acabou de ver a anatomia do prompt. Agora escreve um, **roda**, e revisa o que voltou. O loop completo — escrever, executar, revisar — é onde o aprendizado sobre prompts acontece; sem a resposta, é como aprender a perguntar sem ouvir.
+
+### O pedido
+
+Cada dupla escreve um prompt de **planejamento** da primeira funcionalidade do próprio PRD, usando o template do Dia 2.
+
+**A restrição que torna o bloco seguro:** o prompt é sempre de planejamento e sempre contém `não altere arquivos`. Zero risco de estragar o projeto, e reforça a distinção planejar × implementar que o Dia 3 vai exigir.
+
+### Como conduzir
+
+| Tempo | O que acontece |
+| ----: | -------------- |
+| 3 min | você mostra o esqueleto do prompt e a restrição obrigatória |
+| 8 min | as duplas escrevem, com o checklist de revisão de prompt ao lado |
+| 2 min | executam |
+| 7 min | leem a resposta com o checklist na mão |
+| 5 min | duas duplas relatam: o que o agente supôs que estava errado? |
+
+### O que verificar circulando
+
+- o prompt tem os oito blocos, ou pelo menos objetivo, fora do escopo, critérios e validação?
+- contém `não altere arquivos`?
+- **`git status` está limpo depois de rodar?** Se não estiver, o agente ignorou a restrição — e isso vale parar a turma para comentar.
+- a dupla leu a resposta ou só olhou que “veio bastante coisa”?
+
+### A pergunta que fecha o bloco
+
+> **“Qual suposição o agente fez que estava errada?”**
+
+Quase toda dupla encontra uma. É o momento em que a turma passa de *aceitar o que o agente devolve* para *revisar o que o agente devolve* — que é a competência mais valiosa dos três dias.
+
+Material: [`materiais/dia-2/atividades/pratica-prompt-executado.md`](materiais/dia-2/atividades/pratica-prompt-executado.md).
+
+### Transição para o Bloco 4
+
+“Repare quanto do que vocês escreveram vale para **toda** tarefa deste projeto, não só para esta. Essa parte está no lugar errado.”
+
+---
+
+## Prática B — Escrever o `AGENTS.md` do projeto
+
+**Bloco 5 · 12 minutos · em duplas**
+
+A transição do Bloco 4 já entrega a pergunta: **o que eu vou digitar de novo amanhã?** Essa parte pertence ao repositório.
+
+### Como conduzir
+
+1. Dois minutos: projete o `AGENTS.md` do TaskWeather organizado como referência de tamanho. Enxuto, não um manual.
+2. Oito minutos: cada dupla escreve o próprio, respondendo às cinco perguntas do Slide 7 — o que ler antes, como o projeto se organiza, o que não pode ser feito, quais comandos executar, quando está concluído.
+3. Dois minutos: commitem.
+
+### O que verificar circulando
+
+- caberia em uma tela? Se passou de duas, está virando manual;
+- tem alguma regra que ninguém consegue verificar?
+- tem regra que contradiz outra?
+- copiou grandes blocos de outro arquivo? Prefira referência a duplicação.
+
+Material: [`materiais/dia-2/atividades/pratica-agents-md.md`](materiais/dia-2/atividades/pratica-agents-md.md).
+
+### Resultado observável do Dia 2
+
+Confira, por dupla, antes de encerrar:
+
+- [ ] `AGENTS.md` commitado no repositório do projeto;
+- [ ] um plano gerado pelo agente, revisado, com arquivos afetados e critérios;
+- [ ] `git status` confirma que nada foi alterado durante o planejamento;
+- [ ] **a dupla aponta, no plano recebido, uma suposição do agente que estava errada.**
+
+O último item é o que mais importa. Os outros três mostram que seguiram o procedimento; esse mostra que revisaram.
+
 # 6. Blocos opcionais para ampliar até 3 horas
 
 ## Opção A — Criação colaborativa de uma skill — 20 minutos
@@ -695,6 +786,8 @@ Criar uma skill simples de `review-changes` com:
 Mostrar configuração, variável de ambiente, ferramentas expostas, consulta e revogação.
 
 ## Opção C — Comparação de três níveis de prompt — 20 minutos
+
+> Com a Prática A na agenda base, este bloco fica melhor como demonstração conduzida por você do que como exercício da turma.
 
 Executar:
 
@@ -714,11 +807,14 @@ Comparar planos, arquivos alterados e qualidade da validação.
 - catálogo inicial de skills;
 - checklist de segurança MCP;
 - matriz de escolha de modelo e raciocínio;
-- prompts utilizados na demonstração.
+- prompts utilizados na demonstração;
+- folhas das Práticas A e B.
 
 # 8. Indicadores de compreensão
 
-Perguntar ao final:
+A verificação principal é o artefato: o checklist de resultado observável no fim da Prática B.
+
+Como complemento, perguntar ao final:
 
 1. Que informação deve ficar no prompt e qual deve ficar no repositório?
 2. Qual a diferença entre prompt e skill?

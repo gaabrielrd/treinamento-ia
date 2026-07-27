@@ -16,13 +16,13 @@ materiais/
 │   ├── 01-taskweather-desorganizado/   aplicação propositalmente desorganizada
 │   ├── 02-taskweather-organizado/      mesma aplicação, organizada por funcionalidades
 │   ├── entregaveis/                    7 checklists e modelos para a turma
-│   ├── atividades/                     a atividade final (Slide 14)
+│   ├── atividades/                     folha do PRD da dupla + atividade final
 │   ├── github-exemplos/                issue e pull request de exemplo
 │   └── referencias.md                  fontes oficiais do dia
 ├── dia-2/
 │   ├── entregaveis/                    template de prompt, catálogos e checklists
 │   ├── demonstracoes/                  4 demonstrações, com prompt reserva
-│   ├── atividades/                     reescrever prompt e criar uma skill
+│   ├── atividades/                     2 práticas com o agente + criar uma skill
 │   └── referencias.md                  fontes oficiais do dia
 ├── dia-3/
 │   ├── preparacao/                     checklist, checkpoints e erros comuns
@@ -32,6 +32,20 @@ materiais/
 │   └── referencias.md                  fontes oficiais do dia
 └── decks-build/                        scripts que geram os slides dos três dias
 ```
+
+## O fio que atravessa os três dias
+
+Cada dupla trabalha uma demanda pequena e real da área, e cada dia produz um artefato que é a entrada do próximo:
+
+```
+Dia 1  →  docs/prd.md          problema, escopo, não escopo, critérios, tarefas
+Dia 2  →  AGENTS.md + plano    regras do projeto + plano gerado e revisado
+Dia 3  →  a aplicação          construída a partir do PRD e do plano
+```
+
+É isso que faz a transição entre dias ser um arquivo, não uma frase — e o que torna o resultado de cada dia conferível. O checklist de resultado observável está no fim da seção "Agenda" de cada guia.
+
+Se a primeira turma parecer arriscada para projetos próprios, use um único projeto fictício para todas as duplas: você mantém os artefatos e a observabilidade, sem escopos imprevisíveis.
 
 ## Os dois projetos de exemplo
 

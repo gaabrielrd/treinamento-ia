@@ -32,19 +32,30 @@ Antes da sessão:
 - confirmar que `npm install`, `npm run dev`, `npm run test`, `npm run lint` e `npm run build` funcionam;
 - preparar uma issue e um pull request de exemplo;
 - garantir que os slides tragam pouco texto e diagramas grandes;
-- manter um arquivo com a atividade final para copiar e distribuir.
+- manter um arquivo com a atividade final para copiar e distribuir;
+- pedir a cada dupla, com antecedência, **uma demanda pequena e real da área** para servir de projeto ao longo dos três dias;
+- criar um repositório vazio por dupla, ou orientar como criar a partir do template.
 
 ## 4. Agenda-base
 
-| Bloco | Tema | Duração |
-|---|---|---:|
-| 1 | Abertura e problema atual | 13 min |
-| 2 | Processo simplificado de desenvolvimento | 41 min |
-| 3 | GitHub e versionamento | 18 min |
-| 4 | Estrutura, documentação e modularização | 18 min |
-| 5 | Testes locais e definição de concluído | 12 min |
-| 6 | Exercício guiado e encerramento | 18 min |
-| **Total** |  | **120 min** |
+| Bloco | Tema | Duração | Slides |
+|---|---|---:|---|
+| 1 | Abertura + **demonstração do vazamento de dados** | 13 min | 1–2 |
+| 2 | Processo, definir problema, escopo e não escopo | 23 min | 3–5 |
+| 3 | **Prática A — escrever o PRD do próprio projeto** | 15 min | — |
+| 4 | Critérios de aceite e dividir em tarefas | 18 min | 6–7 |
+| 5 | **Prática B — completar o PRD** com critérios e tarefas | 12 min | — |
+| 6 | Estrutura, documentação e validação local | 22 min | 10–13 |
+| 7 | **Versionar o PRD + primeiro contato com o agente** | 17 min | 8–9, 14–15 |
+| **Total** |  | **120 min** |  |
+
+Três mudanças em relação a uma agenda puramente expositiva:
+
+1. **O bloco de processo foi partido em dois, com prática entre eles.** Vinte e três minutos de exposição, quinze de produção, dezoito de exposição, doze de produção. Nenhum trecho de fala passa de 25 minutos.
+2. **O GitHub deixou de ser bloco teórico.** Branch, commit e pull request são operados no Bloco 7, sobre um arquivo que a dupla acabou de escrever. Ensina-se fazendo, não explicando.
+3. **A demonstração de vazamento de dados abre o dia.** É o gancho concreto que sustenta os quarenta minutos de processo seguintes.
+
+O dia inteiro converge para um artefato: **o `docs/prd.md` de um projeto real da dupla**, commitado. Ele é a entrada do Dia 2.
 
 ---
 
@@ -84,6 +95,27 @@ Perguntar:
 > “Qual foi o problema mais comum que vocês já encontraram em uma aplicação criada com IA?”
 
 Ouvir duas ou três respostas, sem aprofundar tecnicamente.
+
+### Demonstração de abertura — o vazamento de dados (6 minutos)
+
+**Faça isto antes de qualquer slide de processo.** É o gancho do dia.
+
+Abra `materiais/dia-1/01-taskweather-desorganizado` no navegador e execute, narrando:
+
+1. entre com `ana@empresa.com`;
+2. crie uma tarefa chamada **“consulta médica”**;
+3. clique em `sair`;
+4. entre com `joao@empresa.com`.
+
+A tarefa da Ana aparece. **O João está vendo a agenda médica da Ana.**
+
+Repita no projeto organizado: a lista do João vem vazia, e ao voltar para o e-mail da Ana a tarefa dela reaparece.
+
+Então diga a frase que organiza o dia:
+
+> “Ninguém programou esse vazamento. Ele é consequência de desorganização — com sete chaves de armazenamento espalhadas por quatro arquivos, não havia onde escrever a regra ‘as tarefas são de quem entrou’. O dia de hoje é sobre o que evita isso.”
+
+Roteiro completo da demonstração em `materiais/dia-1/README.md`.
 
 ### Transição
 
@@ -705,9 +737,125 @@ No próximo encontro, vamos transformar esse processo em instruções que o agen
 
 ---
 
+---
+
+# 5b. Blocos de prática
+
+Os slides descrevem o que é falado. Estes três blocos descrevem o que a turma **produz**. São eles que fazem o dia terminar em um artefato.
+
+## Prática A — Escrever o PRD do próprio projeto
+
+**Bloco 3 · 15 minutos · em duplas**
+
+Cada dupla recebe uma demanda real e pequena da área. O objetivo não é resolvê-la — é **defini-la**.
+
+Distribua [`materiais/dia-1/atividades/pratica-prd-da-dupla.md`](materiais/dia-1/atividades/pratica-prd-da-dupla.md) e peça que preencham as três primeiras seções: **problema**, **escopo** e **não escopo**.
+
+### Como conduzir
+
+1. Dois minutos explicando o formulário. Não mais que isso.
+2. Dez minutos de produção. Circule e leia por cima do ombro.
+3. Três minutos: peça a **uma** dupla que leia o não escopo em voz alta — não o escopo. O não escopo é onde está o aprendizado.
+
+### O que corrigir circulando
+
+- não escopo vazio, ou com menos de três linhas;
+- escopo com mais de seis itens — não é uma primeira versão;
+- problema escrito como solução (“preciso de um dashboard” em vez de “levo 20 minutos juntando três planilhas”);
+- decisão de tecnologia aparecendo. Corte: **não é necessária nesta folha.**
+
+### Transição para o Bloco 4
+
+“Vocês definiram o que entra. Agora falta a parte que decide se está pronto.”
+
+---
+
+## Prática B — Completar o PRD com critérios e tarefas
+
+**Bloco 5 · 12 minutos · em duplas**
+
+Mesma folha, seções 4 e 5: **critérios de aceite** e **tarefas**.
+
+### Como conduzir
+
+1. Um minuto relembrando as quatro perguntas que revelam critérios esquecidos: campo vazio, erro, recarregar a página, nenhum dado ainda.
+2. Oito minutos de produção.
+3. Três minutos: cada dupla troca a folha com a dupla vizinha e marca **um** critério que não é verificável.
+
+A troca é o melhor uso destes três minutos. Ler o critério de outra pessoa e não conseguir dizer “sim ou não” ensina mais rápido que qualquer explicação.
+
+### O que corrigir circulando
+
+- critérios com “fácil”, “rápido”, “bonito”, “moderno”, “intuitivo” ou “seguro”;
+- nenhum critério de erro;
+- menos de dois critérios por funcionalidade;
+- tarefas que na verdade são a entrega inteira em uma linha.
+
+### Transição para o Bloco 6
+
+“Vocês têm o que construir e como verificar. Falta onde isso mora.”
+
+---
+
+## Bloco 7 — Versionar o PRD e o primeiro contato com o agente
+
+**17 minutos**
+
+Este bloco substitui o bloco teórico de GitHub. Os conceitos são os mesmos — branch, commit, pull request — mas são **operados**, sobre o arquivo que a dupla escreveu.
+
+### Parte 1 — Versionar (7 minutos)
+
+Com o repositório da dupla aberto:
+
+1. transcrevam o PRD da folha para `docs/prd.md`;
+2. criem a branch `docs/prd`;
+3. commitem com `docs: adiciona definição do produto`;
+4. abram um pull request.
+
+Nomeie cada operação em voz alta enquanto eles fazem. É a diferença entre ouvir “o que é um commit” e ter feito um.
+
+Quem não tiver ambiente pronto trabalha em dupla com quem tiver. Ninguém fica parado resolvendo instalação.
+
+### Parte 2 — Primeiro contato com o agente (10 minutos)
+
+O primeiro contato é **somente leitura**. Não há risco de estragar nada, e o resultado é o melhor fecho possível para o dia.
+
+```text
+Leia docs/prd.md. Não altere nenhum arquivo.
+Liste:
+1. o que ficou ambíguo;
+2. o que você teria de decidir sozinho para implementar isso;
+3. quais critérios de aceite não são verificáveis.
+```
+
+### A pergunta de fechamento
+
+Depois que as respostas voltarem:
+
+> **“O agente encontrou uma lacuna que vocês não tinham visto?”**
+
+Quase sempre a resposta é sim. E aí a mensagem do dia se fecha sozinha: cada lacuna que ficou nessa folha seria uma decisão que o agente tomaria sozinho — e vocês descobriram isso **antes** de existir uma linha de código.
+
+Confirme com a turma que `git status` não mostra nenhuma alteração. O agente leu, analisou e não tocou em nada, porque foi instruído a não tocar. É a primeira demonstração prática de que **restrição escrita é restrição obedecida**.
+
+### Resultado observável do Dia 1
+
+Confira, por dupla, antes de encerrar:
+
+- [ ] `docs/prd.md` commitado, com problema, escopo, não escopo, critérios e tarefas;
+- [ ] pelo menos dois critérios por funcionalidade;
+- [ ] nenhum critério com “fácil”, “rápido”, “bonito”, “moderno” ou “seguro”;
+- [ ] ao menos um critério de caso de erro;
+- [ ] a dupla rodou os comandos de validação e sabe reconhecer uma falha;
+- [ ] a dupla consegue nomear uma lacuna que o agente apontou no PRD.
+
+Quem fecha os seis está pronto para o Dia 2 — e leva um arquivo, não uma sensação.
+
 # 6. Blocos opcionais para ampliar até 3 horas
 
 ## Opção A — Análise de projeto desorganizado — 20 minutos
+
+> A demonstração de vazamento de dados, que era o centro deste bloco, passou para a abertura do Dia 1. O que resta aqui é a análise guiada por perguntas, que continua valendo como bloco de extensão.
 
 Mostrar uma aplicação com:
 
@@ -743,11 +891,14 @@ Cada grupo escreve três critérios observáveis.
 - fluxo GitHub resumido;
 - checklist de definição de concluído;
 - lista de comandos locais;
-- glossário: repositório, issue, branch, commit, pull request e merge.
+- glossário: repositório, issue, branch, commit, pull request e merge;
+- folha de prática do PRD da dupla.
 
 # 8. Indicadores de compreensão
 
-Ao final, verificar se os participantes conseguem responder:
+A verificação principal é o artefato: o checklist de resultado observável no fim do Bloco 7. Ele é conferível, ao contrário de uma resposta oral.
+
+Como complemento, verificar se os participantes conseguem responder:
 
 1. O que precisa ser definido antes de pedir código?
 2. Qual a diferença entre funcionalidade e critério de aceite?

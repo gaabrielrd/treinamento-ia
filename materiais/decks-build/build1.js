@@ -13,17 +13,18 @@ const cap = K.bannerSlide(p, {
 cap.addNotes("Objetivo do dia: ensinar um processo simples para transformar uma ideia em um projeto organizado antes de solicitar a geração de código. Público: pessoas não desenvolvedoras que utilizam agentes de código.");
 
 // ---------------- AGENDA ----------------
-const sa = K.contentSlide(p, 2, "00 · Agenda", "Agenda do dia", "6 blocos · 120 minutos (base) · até 180 min com opcionais.");
+const sa = K.contentSlide(p, 2, "00 · Agenda", "Agenda do dia", "7 blocos · 120 minutos · duas práticas produzindo o PRD da dupla.");
 K.table(sa, [
   [K.TABLE.header("Bloco"), K.TABLE.header("Tema"), K.TABLE.header("Duração")],
-  [K.TABLE.accent("1"), K.TABLE.cell("Abertura e problema atual"), K.TABLE.muted("13 min")],
-  [K.TABLE.accent("2"), K.TABLE.cell("Processo simplificado de desenvolvimento"), K.TABLE.muted("41 min")],
-  [K.TABLE.accent("3"), K.TABLE.cell("GitHub e versionamento"), K.TABLE.muted("18 min")],
-  [K.TABLE.accent("4"), K.TABLE.cell("Estrutura, documentação e modularização"), K.TABLE.muted("18 min")],
-  [K.TABLE.accent("5"), K.TABLE.cell("Testes locais e definição de concluído"), K.TABLE.muted("12 min")],
-  [K.TABLE.accent("6"), K.TABLE.cell("Exercício guiado e encerramento"), K.TABLE.muted("18 min")],
+  [K.TABLE.accent("1"), K.TABLE.cell("Abertura + demonstração do vazamento"), K.TABLE.muted("13 min")],
+  [K.TABLE.accent("2"), K.TABLE.cell("Processo, problema, escopo e não escopo"), K.TABLE.muted("23 min")],
+  [K.TABLE.accent("3"), K.TABLE.cell("Prática: PRD do próprio projeto"), K.TABLE.muted("15 min")],
+  [K.TABLE.accent("4"), K.TABLE.cell("Critérios de aceite e dividir em tarefas"), K.TABLE.muted("18 min")],
+  [K.TABLE.accent("5"), K.TABLE.cell("Prática: completar o PRD"), K.TABLE.muted("12 min")],
+  [K.TABLE.accent("6"), K.TABLE.cell("Estrutura, documentação e validação local"), K.TABLE.muted("22 min")],
+  [K.TABLE.accent("7"), K.TABLE.cell("Versionar o PRD + primeiro contato com o agente"), K.TABLE.muted("17 min")],
   [K.TABLE.cell("", true), K.TABLE.cell("Total", true), K.TABLE.accent("120 min")]
-], { x: T.MX, y: 2.4, colW: [1.3, 8.4, 2.4], rowH: 0.5 });
+], { x: T.MX, y: 2.4, colW: [1.3, 8.4, 2.4], rowH: 0.45 });
 sa.addNotes("Ao final, o participante deverá: explicar por que começar pelo código aumenta o risco; definir problema, público, objetivo, escopo e não escopo; transformar funcionalidades em critérios de aceite; dividir uma entrega em tarefas; compreender repositório, branch, commit e PR; reconhecer estrutura modular; identificar documentação mínima; executar validações locais.");
 
 // ---------------- 01 · O problema ----------------
