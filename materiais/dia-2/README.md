@@ -37,8 +37,6 @@ O Dia 1 definiu um processo. O Dia 2 ensina a **comunicar esse processo ao agent
 
 ## Preparação antes da sessão
 
-A lista do roteiro (§3), item por item:
-
 - [ ] **Agente aberto em um repositório de demonstração** → use `materiais/dia-1/02-taskweather-organizado`. Rode `npm run validate` antes e confirme os 47 testes verdes.
 - [ ] **Prompt ruim e versão estruturada** → [demonstracoes/01](demonstracoes/01-prompt-vago-vs-estruturado.md).
 - [ ] **`AGENTS.md`, `CLAUDE.md` e uma skill abertos** → deixe três abas prontas: o `AGENTS.md` e o `CLAUDE.md` do TaskWeather organizado e `template-ia-web/skills/plan-feature/SKILL.md`.
@@ -95,7 +93,7 @@ E o inverso, que é o alerta do dia: **um modelo mais capaz não substitui nenhu
 
 ---
 
-## Indicadores de compreensão (§8)
+## Indicadores de compreensão
 
 Ao final, verifique se a turma responde:
 
@@ -112,7 +110,6 @@ Se travarem na 1, refaça a pergunta assim: *"o que você digitaria de novo aman
 
 ## Observações
 
-- **Catálogo de skills:** o template é a fonte de verdade. O roteiro (Slide 10) lista 6 skills iniciais; o template tem **8** — inclui também `plan-app` e `frontend-skill`. O catálogo desta pasta traz as 8.
-- **Entrada da aplicação:** no TaskWeather a pessoa informa **apenas o e-mail**, sem senha, e o e-mail separa os dados de cada usuário. O prompt do Slide 5 fala em "credencial correta/incorreta" porque foi escrito antes dessa decisão — [demonstracoes/01](demonstracoes/01-prompt-vago-vs-estruturado.md) usa essa diferença como material de aula, em vez de esconder.
+- **Entrada da aplicação:** no TaskWeather a pessoa informa **apenas o e-mail**, sem senha, e o e-mail separa os dados de cada usuário. Isso identifica, mas não autentica — vale dizer em voz alta.
 - **Se a demonstração ao vivo falhar, não insista mais de dois minutos.** Todos os materiais desta pasta funcionam projetados, sem agente rodando. O conteúdo do dia é o raciocínio, não a execução.
 - Depois de qualquer demonstração que altere o projeto do Dia 1: `git checkout materiais/dia-1` e `npm run validate` para confirmar que voltou ao estado original.

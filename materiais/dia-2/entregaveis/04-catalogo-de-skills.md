@@ -6,7 +6,7 @@ Uma skill é um procedimento reutilizável. Em vez de repetir o mesmo processo e
 
 ## As skills do template
 
-Estas são as skills que existem hoje em [`template-ia-web/skills/`](../../../template-ia-web/skills/) — verificadas no repositório, não uma lista desejada.
+As oito skills disponíveis em [`template-ia-web/skills/`](../../../template-ia-web/skills/):
 
 | Skill                     | Quando usar                                                                 |
 | ------------------------- | --------------------------------------------------------------------------- |
@@ -73,8 +73,6 @@ A `description` é a parte mais importante e a mais negligenciada: é ela que fa
 - O procedimento muda em cada projeto → é documentação, não skill.
 - Você não consegue descrever os passos → ainda não é um procedimento.
 
-## Sobre a `accessibility-review`
+## Criar uma skill nova
 
-O Dia 3 (Bloco opcional 3) menciona uma skill `accessibility-review`. **Ela não existe no template** — as oito acima são todas as que existem, e o template é a fonte de verdade.
-
-O bloco de acessibilidade do Dia 3 usa, em vez dela, um prompt estruturado e um teste manual de teclado. Se quiser transformá-la em skill de verdade, a atividade [opcao-a-criar-uma-skill.md](../atividades/opcao-a-criar-uma-skill.md) ensina exatamente esse processo.
+Quando um procedimento se repete e não está na lista acima, ele é candidato a skill. A atividade [opcao-a-criar-uma-skill.md](../atividades/opcao-a-criar-uma-skill.md) conduz esse processo do zero, com as quatro perguntas que uma skill precisa responder.

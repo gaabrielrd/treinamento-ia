@@ -36,20 +36,22 @@ Contexto:
 Aplicação React organizada por features.
 
 Objetivo:
-Implementar um fluxo de login simulado.
+Entrada por e-mail, sem senha.
 
 Escopo:
-Formulário, validação, sessão local e logout.
+Campo de e-mail, validação, sessão local, logout
+e dados separados por e-mail.
 
 Fora do escopo:
-Cadastro, backend e recuperação de senha.
+Senha, cadastro e backend.
 
 Restrições:
 Não instalar dependências e não alterar tarefas.
 
 Critérios:
-Credencial correta acessa; incorreta mostra erro;
-sessão permanece; logout encerra sessão.
+E-mail válido entra; inválido mostra erro;
+sessão permanece; logout encerra;
+tarefas de um e-mail não vão para outro.
 
 Processo:
 Analise, apresente o plano, implemente e revise.
@@ -62,14 +64,14 @@ Execute testes, lint e build.
 
 Percorra bloco por bloco mostrando **qual decisão saiu do agente e voltou para você**:
 
-| Bloco            | Decisão que deixou de ser do agente         |
-| ---------------- | ------------------------------------------- |
-| Objetivo         | simulado, não real                          |
-| Fora do escopo   | sem cadastro, sem backend, sem senha        |
-| Restrições       | sem biblioteca nova, sem tocar em tarefas   |
-| Critérios        | o que significa "funcionar"                 |
-| Processo         | plano antes de código                        |
-| Validação        | o que comprova que terminou                  |
+| Bloco            | Decisão que deixou de ser do agente             |
+| ---------------- | ---------------------------------------------- |
+| Objetivo         | identificação por e-mail, sem senha             |
+| Fora do escopo   | sem senha, sem cadastro, sem backend            |
+| Restrições       | sem biblioteca nova, sem tocar em tarefas       |
+| Critérios        | o que significa "funcionar", inclusive no erro  |
+| Processo         | plano antes de código                            |
+| Validação        | o que comprova que terminou                      |
 
 Diga o número: **oito linhas de contexto** substituíram uma dúzia de suposições.
 
@@ -91,11 +93,13 @@ dia-1/02-taskweather-organizado/src/features/auth/
 
 E abra [`session.test.ts`](../../dia-1/02-taskweather-organizado/src/features/auth/tests/session.test.ts): cada teste tem, em comentário, **o critério de aceite correspondente**. É a linha reta entre o que foi pedido e o que foi verificado.
 
-### Um detalhe que vale muito apontar
+### A decisão que o pedido vago esconde
 
-O prompt acima fala em "credencial correta" e "incorreta" — porque foi escrito **antes** da decisão de produto. No TaskWeather, a decisão final foi diferente: **a pessoa informa apenas o e-mail, sem senha**, e o e-mail também separa os dados de cada usuário.
+Vale parar um instante na linha **"sem senha"**. Ela não é um detalhe técnico: é uma decisão de produto que o pedido original — "faça um login moderno" — deixava totalmente em aberto.
 
-Use isso: **o prompt não é sagrado, a decisão de produto é.** Quando a decisão muda, os critérios mudam com ela — e é por isso que critérios moram no `docs/prd.md` do projeto, não só no prompt de uma conversa. Compare a linha do prompt com os critérios reais em [`docs/prd.md`](../../dia-1/02-taskweather-organizado/docs/prd.md).
+Sem ela escrita, o agente resolve sozinho, e o caminho natural é construir senha, cadastro e recuperação de senha. Três funcionalidades que ninguém pediu, cada uma com tela, teste e mensagem de erro própria.
+
+Os critérios completos desta funcionalidade estão em [`docs/prd.md`](../../dia-1/02-taskweather-organizado/docs/prd.md). É lá que eles moram — não no prompt de uma conversa.
 
 ---
 

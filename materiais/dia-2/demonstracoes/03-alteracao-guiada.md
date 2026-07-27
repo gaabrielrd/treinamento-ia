@@ -1,6 +1,6 @@
 # Demonstração — análise, plano, implementação e validação
 
-**Preparação do instrutor (§3)** · 12 a 15 minutos · a demonstração central do dia
+**Slide 2** · 12 a 15 minutos · a demonstração central do dia
 
 O objetivo é mostrar o ciclo completo do Slide 2 em uma alteração pequena o suficiente para caber na aula: **ler contexto → explorar → planejar → alterar → executar → revisar**.
 

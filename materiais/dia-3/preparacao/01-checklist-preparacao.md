@@ -1,17 +1,16 @@
 # Checklist de preparação — Dia 3
 
-A lista do roteiro (§4), com o que já está resolvido e o que exige a sua máquina.
+O que preparar antes da prática, e o que já está pronto para usar.
 
-## Já resolvido nestes materiais
+## Já está pronto
 
-- [x] **Testar previamente a API meteorológica** — Open-Meteo verificada: geocodificação e clima atual respondendo. Ver [detalhes abaixo](#a-api-meteorológica).
-- [x] **Garantir que a API não exija segredo no navegador** — a Open-Meteo não usa chave de acesso. Nada de credencial no projeto.
-- [x] **Definir a forma de entrada** — a pessoa informa **apenas o e-mail**, sem senha. O e-mail também separa os dados de cada usuário no `localStorage`.
-- [x] **Manter prompts prontos para copiar** — [`../prompts/prompts-para-copiar.md`](../prompts/prompts-para-copiar.md).
-- [x] **Preparar uma lista de erros comuns** — [`03-erros-comuns-e-contingencias.md`](03-erros-comuns-e-contingencias.md).
-- [x] **Solução final de referência** — [`dia-1/02-taskweather-organizado`](../../dia-1/02-taskweather-organizado) é a aplicação pronta, com as três features e 47 testes passando. Ver a ressalva de credenciais abaixo.
+- **API meteorológica** — Open-Meteo, sem chave de acesso. Endpoints e um detalhe importante da resposta [mais abaixo](#a-api-meteorológica).
+- **Forma de entrada da aplicação** — a pessoa informa **apenas o e-mail**, sem senha. O e-mail também separa os dados de cada usuário no `localStorage`.
+- **Prompts para copiar** — [`../prompts/prompts-para-copiar.md`](../prompts/prompts-para-copiar.md).
+- **Erros comuns e contingências** — [`03-erros-comuns-e-contingencias.md`](03-erros-comuns-e-contingencias.md).
+- **Solução de referência** — [`dia-1/02-taskweather-organizado`](../../dia-1/02-taskweather-organizado), a aplicação completa com as três features e 47 testes passando.
 
-## Exige você, antes da sessão
+## Antes da sessão
 
 - [ ] **Validar o template em uma máquina limpa** — de preferência não a sua. Crie um repositório a partir do template, rode `npm install`, `npm run dev` e `npm run validate`. É o item que mais derruba workshop.
 - [ ] **Criar o repositório-modelo e as branches de checkpoint** — passo a passo em [`02-repositorio-e-checkpoints.md`](02-repositorio-e-checkpoints.md).
@@ -68,11 +67,11 @@ A pessoa informa **apenas o e-mail** — não há senha em nenhum momento. O e-m
 
 ⚠️ **Isto não é autenticação.** Qualquer pessoa pode digitar qualquer e-mail e entrar. A separação evita confusão entre pessoas que compartilham o navegador; ela não protege segredo. Reforce isso em voz alta na abertura — é um ponto de segurança que a turma precisa entender, não uma limitação a esconder.
 
-O roteiro do Dia 3 sugere `demo@empresa.com` como exemplo. Qualquer e-mail válido serve, e usar **dois** e-mails diferentes durante a prática é justamente como se demonstra a separação de dados.
+Use `demo@empresa.com` como exemplo, ou qualquer e-mail válido. Usar **dois** e-mails diferentes durante a prática é justamente como se demonstra a separação de dados.
 
-### Ressalva sobre a solução de referência
+### Se um grupo comparar com a solução de referência
 
-A referência já tem **remover tarefa**, que no Dia 3 é opcional. Se um grupo comparar, é uma boa oportunidade para lembrar que aquilo estava fora do escopo obrigatório.
+A referência já tem **remover tarefa**, que na prática é opcional. É uma boa oportunidade para lembrar que aquilo estava fora do escopo obrigatório — e que escopo que cresce por decisão é diferente de escopo que cresce por acidente.
 
 ## No dia, antes de abrir a sala
 

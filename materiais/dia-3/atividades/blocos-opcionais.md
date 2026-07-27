@@ -85,7 +85,7 @@ Cada grupo revisa o pull request de outro. **O melhor bloco dos quatro** — obr
 
 ## Bloco 3 — Acessibilidade · 15 min
 
-> ⚠️ O roteiro sugere uma skill `accessibility-review`. **Ela não existe no template**, e o template é a fonte de verdade — então use o prompt abaixo. Se quiser transformá-lo em skill, a atividade do Dia 2 (Opção A) ensina o processo.
+Conduza com o prompt abaixo. Se a revisão de acessibilidade virar rotina na área, ele é um bom candidato a skill — a atividade do Dia 2 (Opção A) ensina o processo.
 
 ```text
 Revise a acessibilidade desta aplicação. Não altere arquivos.

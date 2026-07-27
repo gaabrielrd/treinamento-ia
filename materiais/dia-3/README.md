@@ -10,7 +10,7 @@ O dia é quase todo execução dos grupos. Seu trabalho é **circular, verificar
 
 | Arquivo                                                                            | O que é                                                        |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [01-checklist-preparacao.md](preparacao/01-checklist-preparacao.md)                 | a lista do §4, separando o que já está pronto do que exige você |
+| [01-checklist-preparacao.md](preparacao/01-checklist-preparacao.md)                 | o que preparar antes da prática, e o que já está pronto          |
 | [02-repositorio-e-checkpoints.md](preparacao/02-repositorio-e-checkpoints.md)        | passo a passo do repositório-modelo, das 4 branches e do `.zip` |
 | [03-erros-comuns-e-contingencias.md](preparacao/03-erros-comuns-e-contingencias.md) | tabelas de erro por categoria e o que fazer em cada caso        |
 
@@ -108,4 +108,4 @@ A última pergunta é a mais valiosa do treinamento inteiro. Anote as respostas 
 - **Entrada da aplicação:** a pessoa informa **apenas o e-mail**, sem senha, e o e-mail separa os dados de cada usuário no `localStorage`. Isto identifica, mas **não autentica** — diga isso na abertura. A solução de referência do Dia 1 segue a mesma regra.
 - **API de clima:** Open-Meteo, verificada, sem chave de acesso. Detalhe útil: cidade inexistente devolve resposta **sem** o campo `results`, não uma lista vazia. Quem tratou só "lista vazia" quebra nesse caso — bom achado para a revisão.
 - **Solução de referência:** [`dia-1/02-taskweather-organizado`](../dia-1/02-taskweather-organizado) já é a aplicação completa, com 47 testes passando. Serve de referência sem você precisar construí-la de novo.
-- **As branches de checkpoint precisam ser criadas por você**, na sua conta — não é possível prepará-las aqui. Passo a passo em [preparacao/02](preparacao/02-repositorio-e-checkpoints.md). Se o tempo for curto, priorize validar o template em máquina limpa e gerar o `.zip`.
+- **Branches de checkpoint:** crie-as na sua conta antes da sessão — são o que desbloqueia um grupo em segundos. Passo a passo em [preparacao/02](preparacao/02-repositorio-e-checkpoints.md). Se o tempo for curto, priorize validar o template em máquina limpa e gerar o `.zip`.

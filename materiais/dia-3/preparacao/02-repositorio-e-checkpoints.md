@@ -1,8 +1,8 @@
 # Repositório-modelo e branches de checkpoint
 
-O roteiro (§4) pede *"criar tags ou branches de checkpoint"* e *"ter uma branch pronta após cada etapa caso algum grupo fique bloqueado"*.
+Cada etapa da prática tem uma branch de referência correspondente. Elas existem para desbloquear um grupo em segundos: se alguém empaca na Etapa 4, você o move para `checkpoint/todos` e ele segue para a Etapa 5.
 
-Isso precisa ser feito **na sua conta do GitHub**, com o seu acesso — não dá para preparar dentro deste repositório de materiais. Abaixo está o passo a passo.
+As branches ficam na sua conta do GitHub. O passo a passo abaixo cria as quatro, mais um arquivo compactado de contingência.
 
 > **Por que branches e não pastas:** o grupo bloqueado precisa continuar de onde parou, sem perder o histórico. `git checkout checkpoint/todos` resolve em cinco segundos. Copiar pasta, não.
 

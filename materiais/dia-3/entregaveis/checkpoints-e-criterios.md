@@ -106,7 +106,7 @@ O último é o mais instrutivo: pergunte ao grupo *"o que deveria ter percebido 
 
 ---
 
-## Critérios de sucesso da prática (§10)
+## Critérios de sucesso da prática
 
 O grupo concluiu quando:
 

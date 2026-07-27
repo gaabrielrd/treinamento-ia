@@ -18,7 +18,7 @@ cd ../02-taskweather-organizado && npm install
 
 Deixe **dois terminais e duas janelas do navegador** abertos, um projeto em cada. O Vite usa a porta 5173 para o primeiro que subir e 5174 para o segundo — subir os dois antes da aula evita procurar endereço no meio da explicação.
 
-Estado verificado nesta preparação:
+Estado dos dois projetos:
 
 | Comando            | 01 desorganizado                 | 02 organizado          |
 | ------------------ | -------------------------------- | ---------------------- |
@@ -33,7 +33,7 @@ O projeto desorganizado **funciona**. Esse é o ponto: funcionar não é o mesmo
 
 ## Slide 2 — "Tudo o que não definimos vira uma decisão do agente"
 
-A demonstração pedida no roteiro é mostrar duas estruturas contrastantes. Coloque as duas árvores lado a lado:
+Coloque as duas árvores de pastas lado a lado:
 
 ```
 01-desorganizado/src/          02-organizado/src/
@@ -55,7 +55,7 @@ Pergunta para a turma: **"em qual dos dois você sabe onde mexer para alterar o 
 
 Use o projeto organizado. A tabela "Como encontrar um arquivo" em [`02-.../docs/architecture.md`](02-taskweather-organizado/docs/architecture.md) já está pronta para projetar na tela.
 
-Depois mostre a comparação pedida no roteiro: no projeto desorganizado, a funcionalidade "tarefas" está espalhada por `App.jsx`, `utils.js`, `helpers.js` e `components/Coisas.jsx` — quatro arquivos, nenhum com esse nome.
+Depois mostre o contraste: no projeto desorganizado, a funcionalidade "tarefas" está espalhada por `App.jsx`, `utils.js`, `helpers.js` e `components/Coisas.jsx` — quatro arquivos, nenhum com esse nome.
 
 ## Slides 11 a 13 — Documentação e validação
 

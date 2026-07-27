@@ -22,11 +22,12 @@ materiais/
 │   ├── entregaveis/                    template de prompt, catálogos e checklists
 │   ├── demonstracoes/                  4 demonstrações, com prompt reserva
 │   └── atividades/                     reescrever prompt e criar uma skill
-└── dia-3/
-    ├── preparacao/                     checklist, checkpoints e erros comuns
-    ├── prompts/                        todos os prompts da prática, para copiar
-    ├── entregaveis/                    roteiro do participante, checkpoints, modelo de PR
-    └── atividades/                     os 4 blocos opcionais
+├── dia-3/
+│   ├── preparacao/                     checklist, checkpoints e erros comuns
+│   ├── prompts/                        todos os prompts da prática, para copiar
+│   ├── entregaveis/                    roteiro do participante, checkpoints, modelo de PR
+│   └── atividades/                     os 4 blocos opcionais
+└── decks-build/                        scripts que geram os slides dos três dias
 ```
 
 ## Os dois projetos de exemplo
@@ -47,41 +48,19 @@ cd ../02-taskweather-organizado && npm install && npm run validate
 
 O projeto organizado é reusado nos três dias: no Dia 1 como contraste, no Dia 2 como repositório das demonstrações, no Dia 3 como solução de referência.
 
-## Onde cada entregável do roteiro foi atendido
+## O que a turma leva em cada dia
 
-**Dia 1 (§7)** — todos em [`dia-1/entregaveis/`](dia-1/entregaveis/): checklist de definição do problema · modelo de escopo e não escopo · modelo de critérios de aceite · fluxo GitHub resumido · checklist de definição de concluído · lista de comandos locais · glossário.
+**Dia 1** — [`dia-1/entregaveis/`](dia-1/entregaveis/): checklist de definição do problema · modelo de escopo e não escopo · modelo de critérios de aceite · fluxo GitHub resumido · checklist de definição de concluído · lista de comandos locais · glossário. A atividade final está em [`dia-1/atividades/`](dia-1/atividades/) e os exemplos de issue e pull request em [`dia-1/github-exemplos/`](dia-1/github-exemplos/).
 
-**Dia 2 (§7)** — todos em [`dia-2/entregaveis/`](dia-2/entregaveis/): template de prompt · checklist de revisão de prompt · resumo de `AGENTS.md` e `CLAUDE.md` · catálogo de skills · checklist de segurança MCP · matriz de modelo e raciocínio. Os prompts das demonstrações estão em [`dia-2/demonstracoes/`](dia-2/demonstracoes/).
+**Dia 2** — [`dia-2/entregaveis/`](dia-2/entregaveis/): template de prompt · checklist de revisão de prompt · resumo de `AGENTS.md` e `CLAUDE.md` · catálogo de skills · checklist de segurança MCP · matriz de modelo e raciocínio. As demonstrações para projetar estão em [`dia-2/demonstracoes/`](dia-2/demonstracoes/) e as duas atividades em [`dia-2/atividades/`](dia-2/atividades/).
 
-**Dia 3 (§4)** — a preparação está em [`dia-3/preparacao/`](dia-3/preparacao/) e os prompts em [`dia-3/prompts/`](dia-3/prompts/).
+**Dia 3** — [`dia-3/entregaveis/`](dia-3/entregaveis/): roteiro do participante · checkpoints e critérios · modelo de pull request. A preparação da sessão está em [`dia-3/preparacao/`](dia-3/preparacao/), os prompts em [`dia-3/prompts/`](dia-3/prompts/) e os blocos de extensão em [`dia-3/atividades/`](dia-3/atividades/).
 
-## Slides
+## Entrada da aplicação: e-mail, sem senha
 
-Os três decks (`apresentacao-dia-*.key` e `.pdf`, na raiz do repositório) **já estão atualizados** com as decisões atuais — 13 slides de 46 mudaram, principalmente a entrada por e-mail sem senha. O registro slide a slide está em [slides-a-atualizar.md](slides-a-atualizar.md).
+Decisão de produto que vale para os três dias: **a pessoa informa apenas o e-mail**, e esse e-mail é usado para **separar os dados de cada usuário** no `localStorage`. Não há senha em nenhum momento.
 
-Os decks são gerados por script: os `build*.js` ficam em [decks-build/](decks-build/) e usam a identidade visual da skill `analytics-report-deck`. Para alterar um slide, edite o `build*.js` e reconstrua — as instruções estão no fim do documento acima.
-
-## Pendências que dependem de você
-
-Duas coisas não podem ser preparadas aqui:
-
-1. **As branches de checkpoint do Dia 3** (`checkpoint/inicio`, `auth`, `todos`, `weather`) — precisam da sua conta do GitHub. Passo a passo em [dia-3/preparacao/02](dia-3/preparacao/02-repositorio-e-checkpoints.md).
-2. **A demonstração de MCP do Dia 2** — `claude mcp add` exige terminal interativo. Roteiro e alternativa sem MCP em [dia-2/demonstracoes/04](dia-2/demonstracoes/04-mcp-somente-leitura.md).
-
-## Divergências entre roteiro e template — resolvidas
-
-**O template é a fonte de verdade.** Onde o roteiro divergia do que existe em `template-ia-web`, os materiais seguem o template:
-
-| Onde o roteiro diverge     | O que os materiais fazem                                                                            |
-| -------------------------- | --------------------------------------------------------------------------------------------------- |
-| Dia 3, Bloco opcional 3 pede a skill `accessibility-review` | ela não existe no template, então **não é usada**. O bloco de acessibilidade usa um prompt estruturado e um teste manual de teclado. |
-| Dia 2, Slide 10 lista 6 skills | o catálogo traz as **8** que existem no template, incluindo `plan-app` e `frontend-skill`.        |
-
-### Entrada da aplicação: e-mail, sem senha
-
-Decisão de produto que vale para os três dias: **a pessoa informa apenas o e-mail** e esse e-mail é usado para **separar os dados de cada usuário** no `localStorage`. Não há senha em nenhum momento.
-
-Os dois projetos de exemplo e todos os materiais dos três dias seguem isso. As chaves de armazenamento do projeto organizado:
+As chaves de armazenamento do projeto organizado:
 
 ```
 taskweather:session                    → e-mail da sessão atual
@@ -91,6 +70,8 @@ taskweather:todos:joao@empresa.com     → tarefas do João
 
 > ⚠️ **Isto identifica, não autentica.** Qualquer pessoa pode digitar qualquer e-mail. A separação evita confusão entre pessoas que compartilham o navegador — ela não protege segredo. O ponto está explícito no `docs/prd.md`, no `README.md` e no `CLAUDE.md` do projeto organizado, e vale ser dito em voz alta na abertura de cada dia.
 
-### Pendência não relacionada
+## Slides
 
-Não há `.gitignore` na raiz do repositório. Existe um em `materiais/dia-1/` cobrindo os projetos de exemplo, mas o resto do repositório segue sem.
+Os três decks estão na raiz do repositório, em `.key` e `.pdf`: `apresentacao-dia-1`, `apresentacao-dia-2` e `apresentacao-dia-3`.
+
+Eles são gerados por script, com a identidade visual da skill `analytics-report-deck`. Para alterar um slide, edite o `build*.js` correspondente em [`decks-build/`](decks-build/) e reconstrua — o passo a passo está no [README de lá](decks-build/README.md).
