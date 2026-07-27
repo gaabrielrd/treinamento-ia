@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.summary {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: 0 0 0.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 4px;
+}
+
+.itemLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.doneTitle {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.emptyState {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.7;
+  padding: 1rem;
+  margin: 0;
+}

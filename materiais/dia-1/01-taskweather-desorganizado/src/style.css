@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+.titulo {
+  color: #333;
+  font-size: 28px;
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn2 {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* nao usado */
+.card-antigo {
+  background: yellow;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+}
+
+.container-2 {
+  width: 100%;
+  max-width: 700px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  font-family: Arial, sans-serif;
+}

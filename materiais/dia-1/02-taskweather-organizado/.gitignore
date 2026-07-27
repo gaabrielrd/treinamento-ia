@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+*.tsbuildinfo
+
+# Cobertura e cache
+coverage/
+.eslintcache
+
+# Segredos e variáveis locais
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

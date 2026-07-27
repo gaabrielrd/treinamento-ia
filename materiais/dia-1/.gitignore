@@ -1,0 +1,7 @@
+# Dependências e artefatos de build dos projetos de exemplo.
+# O exemplo desorganizado não tem .gitignore próprio de propósito;
+# este arquivo protege o repositório do treinamento.
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store

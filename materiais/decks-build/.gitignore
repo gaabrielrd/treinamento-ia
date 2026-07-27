@@ -1,0 +1,6 @@
+node_modules/
+*.pptx
+*.key
+*.pdf
+qa*/
+package-lock.json
