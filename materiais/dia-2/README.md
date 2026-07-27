@@ -26,6 +26,10 @@ O Dia 1 definiu um processo. O Dia 2 ensina a **comunicar esse processo ao agent
 | [03-alteracao-guiada.md](demonstracoes/03-alteracao-guiada.md)              | 2 | 12–15 min |
 | [04-mcp-somente-leitura.md](demonstracoes/04-mcp-somente-leitura.md)        | 11 | 10 min |
 
+### `referencias.md`
+
+Fontes oficiais por bloco — prompting, `AGENTS.md`, skills, MCP e escolha de modelo — mais os três estudos de produtividade que sustentam a mensagem do dia. Ver [referencias.md](referencias.md).
+
 ### `atividades/` — para distribuir
 
 | Arquivo                                                              | Slide      | Duração |

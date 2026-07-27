@@ -30,6 +30,10 @@ Mantenha este arquivo aberto durante toda a sessão.
 | [checkpoints-e-criterios.md](entregaveis/checkpoints-e-criterios.md)      | **você**      |
 | [modelo-pull-request.md](entregaveis/modelo-pull-request.md)              | os grupos     |
 
+### `referencias.md`
+
+Documentação do stack por etapa da prática: Vite, React, TypeScript, Open-Meteo, Fetch, Web Storage, Vitest e Testing Library. Deixe à mão para dúvidas técnicas pontuais. Ver [referencias.md](referencias.md).
+
 ### `atividades/`
 
 | Arquivo                                                | O que é                                    |

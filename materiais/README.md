@@ -17,16 +17,19 @@ materiais/
 │   ├── 02-taskweather-organizado/      mesma aplicação, organizada por funcionalidades
 │   ├── entregaveis/                    7 checklists e modelos para a turma
 │   ├── atividades/                     a atividade final (Slide 14)
-│   └── github-exemplos/                issue e pull request de exemplo
+│   ├── github-exemplos/                issue e pull request de exemplo
+│   └── referencias.md                  fontes oficiais do dia
 ├── dia-2/
 │   ├── entregaveis/                    template de prompt, catálogos e checklists
 │   ├── demonstracoes/                  4 demonstrações, com prompt reserva
-│   └── atividades/                     reescrever prompt e criar uma skill
+│   ├── atividades/                     reescrever prompt e criar uma skill
+│   └── referencias.md                  fontes oficiais do dia
 ├── dia-3/
 │   ├── preparacao/                     checklist, checkpoints e erros comuns
 │   ├── prompts/                        todos os prompts da prática, para copiar
 │   ├── entregaveis/                    roteiro do participante, checkpoints, modelo de PR
-│   └── atividades/                     os 4 blocos opcionais
+│   ├── atividades/                     os 4 blocos opcionais
+│   └── referencias.md                  fontes oficiais do dia
 └── decks-build/                        scripts que geram os slides dos três dias
 ```
 
@@ -55,6 +58,14 @@ O projeto organizado é reusado nos três dias: no Dia 1 como contraste, no Dia 
 **Dia 2** — [`dia-2/entregaveis/`](dia-2/entregaveis/): template de prompt · checklist de revisão de prompt · resumo de `AGENTS.md` e `CLAUDE.md` · catálogo de skills · checklist de segurança MCP · matriz de modelo e raciocínio. As demonstrações para projetar estão em [`dia-2/demonstracoes/`](dia-2/demonstracoes/) e as duas atividades em [`dia-2/atividades/`](dia-2/atividades/).
 
 **Dia 3** — [`dia-3/entregaveis/`](dia-3/entregaveis/): roteiro do participante · checkpoints e critérios · modelo de pull request. A preparação da sessão está em [`dia-3/preparacao/`](dia-3/preparacao/), os prompts em [`dia-3/prompts/`](dia-3/prompts/) e os blocos de extensão em [`dia-3/atividades/`](dia-3/atividades/).
+
+## Referências
+
+Cada dia tem um `referencias.md` com as fontes oficiais organizadas por bloco, as leituras curtas para enviar à turma antes da sessão e — no Dia 2 — os estudos de produtividade que sustentam a mensagem do treinamento.
+
+- [dia-1/referencias.md](dia-1/referencias.md) — GitHub, Git, estrutura e validação local
+- [dia-2/referencias.md](dia-2/referencias.md) — prompting, `AGENTS.md`, skills, MCP e escolha de modelo
+- [dia-3/referencias.md](dia-3/referencias.md) — o stack da prática, etapa por etapa
 
 ## Entrada da aplicação: e-mail, sem senha
 

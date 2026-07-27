@@ -9,6 +9,8 @@ Dois projetos com **exatamente o mesmo produto** e as mesmas funcionalidades. A 
 
 O produto é o TaskWeather do roteiro: identificação por e-mail, tarefas e clima atual. Nos dois projetos entra-se informando **apenas um e-mail** — não há senha.
 
+As fontes para aprofundar cada bloco, e as três leituras para enviar à turma antes da sessão, estão em [referencias.md](referencias.md).
+
 ## Preparação antes da sessão
 
 ```bash
