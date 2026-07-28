@@ -10,7 +10,6 @@ Consequência prática: **todo push na branch `master` atualiza o site**, sem pr
 | ------- | ----- |
 | `index.html` | carrega o docsify e toda a configuração |
 | `_sidebar.md` | o menu lateral |
-| `_coverpage.md` | a capa |
 | `README.md` | a página inicial |
 | `downloads.md` | a página de materiais para baixar |
 | `_404.md` | página de endereço inexistente |

@@ -74,47 +74,256 @@
         font-size: 0.85rem;
         color: #666670;
       }
+      /* ------------------------------------------------------------------
+         Tema escuro.
+
+         O tema vue do docsify pinta o texto dos títulos em `.anchor span`
+         (#34495e) e os links com a --theme-color (#6a1bff). Sobre fundo
+         escuro isso dá 1,9:1 e 2,7:1 — abaixo do mínimo de 4,5:1 do WCAG.
+         Regras em `h1..h4` não resolvem: o texto está dentro do `.anchor
+         span`, que tem cor própria. Daí os seletores abaixo.
+
+         Todos os pares desta paleta foram verificados entre 5,9:1 e 16:1.
+         ------------------------------------------------------------------ */
       @media (prefers-color-scheme: dark) {
-        body {
-          background: #17171c;
+        :root {
+          --bg: #17171c;
+          --bg-elev: #1e1e25;
+          --bg-code: #22222c;
+          --fg: #d6d6e0;
+          --fg-strong: #f2f2f7;
+          --fg-muted: #a6a6b4;
+          --border: #30303c;
+          --link: #b79cff;
+          --link-hover: #d0bcff;
         }
+
+        body,
+        .sidebar,
+        body.close .sidebar-toggle,
+        .sidebar-toggle {
+          background-color: var(--bg);
+          color: var(--fg);
+        }
+        .sidebar {
+          background-color: var(--bg-elev);
+          border-right-color: var(--border);
+          color: var(--fg);
+        }
+
+        /* Corpo do texto e negrito */
         .markdown-section,
+        .markdown-section p,
+        .markdown-section li,
+        .markdown-section strong,
         .markdown-section h1,
         .markdown-section h2,
         .markdown-section h3,
         .markdown-section h4,
+        .markdown-section h5,
+        .markdown-section h6 {
+          color: var(--fg);
+        }
+
+        /* Títulos: a cor real vive aqui, não no h1..h6 */
+        .markdown-section h1 .anchor span,
+        .markdown-section h2 .anchor span,
+        .markdown-section h3 .anchor span,
+        .markdown-section h4 .anchor span,
+        .markdown-section h5 .anchor span,
+        .markdown-section h6 .anchor span,
+        .anchor span {
+          color: var(--fg-strong);
+        }
         .markdown-section strong {
-          color: #e8e8ee;
+          color: var(--fg-strong);
         }
-        .sidebar,
-        .sidebar-toggle {
-          background: #1e1e25;
+
+        /* Links do conteúdo */
+        .markdown-section a,
+        .markdown-section a code {
+          color: var(--link);
         }
+        .markdown-section a:hover {
+          color: var(--link-hover);
+        }
+
+        /* Menu lateral */
         .sidebar ul li a {
-          color: #c9c9d2;
+          color: #b8b8c4;
         }
-        .markdown-section blockquote {
-          background: #241c3a;
-          color: #d9d3ee;
+        .sidebar ul li a:hover,
+        .sidebar ul li.active > a {
+          color: var(--link);
         }
+        .sidebar ul li p {
+          color: #9a9aa8;
+        }
+        .sidebar > h1 a,
+        .app-name-link {
+          color: var(--fg-strong);
+        }
+        .sidebar-toggle span {
+          background-color: var(--link);
+        }
+
+        /* Código */
         .markdown-section code,
+        .markdown-section pre,
         .markdown-section pre > code {
-          background: #262633;
+          background-color: var(--bg-code);
+        }
+        .markdown-section code {
+          color: #ffb07c;
+        }
+        .markdown-section pre > code {
+          color: var(--fg);
+        }
+        .markdown-section pre::after,
+        .markdown-section output::after {
+          color: var(--fg-muted);
+        }
+
+        /* Realce de sintaxe: os tons claros do tema não sobrevivem ao fundo escuro */
+        .token.comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+          color: #8a8a99;
+        }
+        .token.string,
+        .token.attr-value,
+        .token.control,
+        .token.directive,
+        .token.unit {
+          color: #9ee6b8;
+        }
+        .token.attr-name,
+        .token.atrule,
+        .token.regex,
+        .token.statement,
+        .language-css .token.string,
+        .style .token.string,
+        .token.entity,
+        .token.url {
+          color: #7fc4ff;
+        }
+        .token.keyword,
+        .token.selector,
+        .token.important,
+        .token.tag {
           color: #cbb6ff;
         }
+        .token.number,
+        .token.boolean,
+        .token.function {
+          color: #ffb07c;
+        }
+        .token.operator,
+        .token.punctuation {
+          color: #a6a6b4;
+        }
+
+        /* Tabelas */
         .markdown-section tr {
-          background: #1e1e25;
-          border-top-color: #2e2e3a;
+          background-color: var(--bg-elev);
+          border-top-color: var(--border);
         }
         .markdown-section tr:nth-child(2n) {
-          background: #232330;
+          background-color: #232330;
         }
+        .markdown-section td,
+        .markdown-section th {
+          border-color: var(--border);
+        }
+        .markdown-section th {
+          color: var(--fg-strong);
+        }
+
+        /* Citações e avisos */
+        .markdown-section blockquote {
+          background: #241c3a;
+          border-left-color: var(--link);
+          color: #c3bcd8;
+        }
+        .markdown-section blockquote strong {
+          color: #ece7f8;
+        }
+        .markdown-section p.tip {
+          background-color: #2a1f24;
+          color: var(--fg);
+        }
+        .markdown-section p.tip code {
+          background-color: #3a2c31;
+        }
+        .markdown-section p.tip em {
+          color: var(--fg-muted);
+        }
+        .markdown-section hr {
+          border-bottom-color: var(--border);
+        }
+
+        /* Busca */
+        .search input {
+          background-color: var(--bg-code);
+          border-color: var(--border);
+          color: var(--fg);
+        }
+        .search input::placeholder {
+          color: var(--fg-muted);
+        }
+        .search {
+          border-bottom-color: var(--border);
+        }
+        .search .results-panel,
+        .search h2,
+        .search p {
+          color: var(--fg);
+        }
+        .search .matching-post {
+          border-bottom-color: var(--border);
+        }
+        .search p.empty {
+          color: var(--fg-muted);
+        }
+        .search .search-keyword {
+          color: #ffb07c;
+        }
+        .search a:hover {
+          color: var(--link);
+        }
+
+        /* Paginação */
+        .pagination-item-label,
+        .pagination-item-subtitle {
+          color: var(--fg-muted);
+        }
+        .pagination-item-title {
+          color: var(--link);
+        }
+        .docsify-pagination-container {
+          border-top-color: var(--border);
+        }
+
+        /* Botão de copiar código */
+        .docsify-copy-code-button {
+          background: var(--border) !important;
+          color: var(--fg) !important;
+        }
+
+        /* Cartões de download */
         .downloads a {
-          background: #1e1e25;
-          border-color: #2e2e3a;
+          background: var(--bg-elev);
+          border-color: var(--border);
+        }
+        .downloads a:hover {
+          border-color: var(--link);
         }
         .downloads strong {
-          color: #e8e8ee;
+          color: var(--fg-strong);
+        }
+        .downloads span {
+          color: var(--fg-muted);
         }
       }
     </style>
@@ -134,8 +343,6 @@
           '/.*/_404.md': '/_404.md',
         },
         loadNavbar: false,
-        coverpage: true,
-        onlyCover: false,
         subMaxLevel: 2,
         maxLevel: 3,
         auto2top: true,
