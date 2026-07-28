@@ -21,6 +21,15 @@ Tudo que é apresentado no treinamento está aqui. Os slides abrem em PDF; os en
 
 As versões editáveis em Keynote estão no repositório: `apresentacao-dia-1.key`, `-2` e `-3`.
 
+### Apresentação da proposta
+
+<div class="downloads">
+  <a href="/apresentacao-gerencia.pdf" download>
+    <strong>Motivação e objetivos — PDF</strong>
+    <span>Para apresentar a proposta do treinamento · 9 slides</span>
+  </a>
+</div>
+
 ## Entregáveis do Dia 1
 
 O que você leva para aplicar no próximo projeto.

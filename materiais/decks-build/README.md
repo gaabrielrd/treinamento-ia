@@ -9,6 +9,7 @@ Os três decks do treinamento (`apresentacao-dia-1`, `-2` e `-3`, na raiz do rep
 | `build1.js`     | conteúdo do deck do Dia 1 — 17 slides                                          |
 | `build2.js`     | conteúdo do deck do Dia 2 — 16 slides                                          |
 | `build3.js`     | conteúdo do deck do Dia 3 — 13 slides                                          |
+| `build-gerencia.js` | deck de motivação e objetivos, para apresentar a proposta — 9 slides       |
 | `common.js`     | padrões de layout desta série (cards, checklists, blocos de código, colunas)   |
 | `export_pdf.sh` | exporta um `.key` para `.pdf` via Keynote                                       |
 
