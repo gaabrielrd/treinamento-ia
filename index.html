@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usando IA: da concepção à entrega</title>
+    <meta
+      name="description"
+      content="Materiais, entregáveis e referências do treinamento de três dias sobre desenvolvimento de aplicações com agentes de código."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+    />
+    <style>
+      :root {
+        --theme-color: #6a1bff;
+        --sidebar-width: 19rem;
+      }
+      .app-name-link img {
+        max-width: 60%;
+      }
+      .sidebar {
+        padding-top: 1.5rem;
+      }
+      .sidebar ul li p {
+        margin: 1.1rem 0 0.4rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #8c8c96;
+      }
+      .markdown-section {
+        max-width: 56rem;
+      }
+      .markdown-section table {
+        display: table;
+        width: 100%;
+      }
+      .markdown-section blockquote {
+        border-left-color: var(--theme-color);
+        background: #f7f4ff;
+        padding: 0.6rem 1rem;
+        border-radius: 0 4px 4px 0;
+      }
+      .markdown-section code {
+        color: #4b1ab8;
+        background: #f3eeff;
+      }
+      /* Faixa de downloads da página inicial */
+      .downloads {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 0.9rem;
+        margin: 1.5rem 0;
+      }
+      .downloads a {
+        display: block;
+        padding: 1rem 1.1rem;
+        border: 1px solid #e5e5ea;
+        border-radius: 8px;
+        text-decoration: none;
+        background: #fff;
+      }
+      .downloads a:hover {
+        border-color: var(--theme-color);
+      }
+      .downloads strong {
+        display: block;
+        color: #18181e;
+      }
+      .downloads span {
+        font-size: 0.85rem;
+        color: #666670;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #17171c;
+        }
+        .markdown-section,
+        .markdown-section h1,
+        .markdown-section h2,
+        .markdown-section h3,
+        .markdown-section h4,
+        .markdown-section strong {
+          color: #e8e8ee;
+        }
+        .sidebar,
+        .sidebar-toggle {
+          background: #1e1e25;
+        }
+        .sidebar ul li a {
+          color: #c9c9d2;
+        }
+        .markdown-section blockquote {
+          background: #241c3a;
+          color: #d9d3ee;
+        }
+        .markdown-section code,
+        .markdown-section pre > code {
+          background: #262633;
+          color: #cbb6ff;
+        }
+        .markdown-section tr {
+          background: #1e1e25;
+          border-top-color: #2e2e3a;
+        }
+        .markdown-section tr:nth-child(2n) {
+          background: #232330;
+        }
+        .downloads a {
+          background: #1e1e25;
+          border-color: #2e2e3a;
+        }
+        .downloads strong {
+          color: #e8e8ee;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">Carregando…</div>
+    <script>
+      window.$docsify = {
+        name: 'Usando IA',
+        nameLink: '#/',
+        repo: 'https://github.com/gaabrielrd/treinamento-ia',
+        loadSidebar: true,
+        // Sem estes alias, uma página profunda procura _sidebar.md na própria
+        // pasta, não encontra, e fica sem menu.
+        alias: {
+          '/.*/_sidebar.md': '/_sidebar.md',
+          '/.*/_404.md': '/_404.md',
+        },
+        loadNavbar: false,
+        coverpage: true,
+        onlyCover: false,
+        subMaxLevel: 2,
+        maxLevel: 3,
+        auto2top: true,
+        relativePath: true,
+        notFoundPage: '_404.md',
+        search: {
+          placeholder: 'Buscar nos materiais…',
+          noData: 'Nenhum resultado.',
+          depth: 3,
+          paths: 'auto',
+        },
+        copyCode: {
+          buttonText: 'Copiar',
+          errorText: 'Erro',
+          successText: 'Copiado',
+        },
+        pagination: {
+          previousText: 'Anterior',
+          nextText: 'Próximo',
+          crossChapter: true,
+          crossChapterText: true,
+        },
+        // Arquivos que não são páginas do site: abrem/baixam direto.
+        externalLinkTarget: '_blank',
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-jsx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-tsx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  </body>
+</html>

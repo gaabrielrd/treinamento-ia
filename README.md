@@ -13,6 +13,21 @@ O foco deste treinamento não é aprofundar conceitos complexos de programação
 - Possam ser facilmente entendidas e continuadas por outras pessoas;
 - Sejam testadas localmente antes de serem consideradas concluídas.
 
+## 🌐 Site do treinamento
+
+Os materiais, entregáveis e referências ficam disponíveis em uma página pública, atualizada automaticamente a cada push:
+
+- **Página inicial** — visão geral dos três dias
+- **[Baixar os materiais](downloads.md)** — slides em PDF, entregáveis e referências por dia
+
+O site é gerado por [docsify](https://docsify.js.org), sem etapa de build: ele lê os próprios `.md` deste repositório. Configuração e publicação em [PUBLICACAO.md](PUBLICACAO.md).
+
+Para ver localmente:
+
+```bash
+python3 -m http.server 8080
+```
+
 ## 📂 Estrutura do Repositório
 
 O repositório está organizado para fornecer o plano de aula completo, roteiros para o instrutor, apresentações em slides e templates práticos de desenvolvimento.
