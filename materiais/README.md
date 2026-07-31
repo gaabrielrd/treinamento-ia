@@ -1,6 +1,14 @@
 # Materiais do treinamento
 
-Materiais de apoio dos três dias, organizados por dia. Cada pasta tem um `README.md` que é o guia do instrutor daquele dia.
+Materiais de apoio dos dois momentos da formação. Cada pasta tem tudo o que aquele encontro usa: `README.md` (guia do instrutor), `roteiro.md` (slide a slide), `entregaveis/` e `referencias.md`.
+
+**Momento 1 · Gestão** — 1 hora, com os líderes de área, **antes** do Momento 2.
+
+| Pasta                   | Tema                                               | Guia                                 |
+| ----------------------- | -------------------------------------------------- | ------------------------------------ |
+| [gestao](gestao/)       | Como a gestão acompanha e participa do processo    | [gestao/README.md](gestao/README.md) |
+
+**Momento 2 · Execução** — 3 encontros de 2 horas, com quem vai implementar.
 
 | Dia                     | Tema                                              | Guia                       |
 | ----------------------- | ------------------------------------------------- | -------------------------- |
@@ -8,11 +16,19 @@ Materiais de apoio dos três dias, organizados por dia. Cada pasta tem um `READM
 | [Dia 2](dia-2/)         | Prompts, contexto persistente, skills e MCP        | [dia-2/README.md](dia-2/README.md) |
 | [Dia 3](dia-3/)         | Prática: criar o TaskWeather com agentes           | [dia-3/README.md](dia-3/README.md) |
 
+O combinado definido no Momento 1 é a regra dentro da qual as duplas trabalham nos três dias — quais artefatos são obrigatórios, quem aprova o quê e como a evidência chega até a gestão.
+
 ## Estrutura
 
 ```
 materiais/
+├── gestao/
+│   ├── README.md                       guia do instrutor do encontro
+│   ├── roteiro.md                      roteiro slide a slide
+│   ├── entregaveis/                    o que conferir, perguntas de aceite, combinado, vocabulário
+│   └── referencias.md                  as fontes citadas no encontro
 ├── dia-1/
+│   ├── README.md                       guia do instrutor · roteiro.md ao lado
 │   ├── 01-taskweather-desorganizado/   aplicação propositalmente desorganizada
 │   ├── 02-taskweather-organizado/      mesma aplicação, organizada por funcionalidades
 │   ├── entregaveis/                    7 checklists e modelos para a turma
@@ -30,8 +46,15 @@ materiais/
 │   ├── entregaveis/                    roteiro do participante, checkpoints, modelo de PR
 │   ├── atividades/                     os 4 blocos opcionais
 │   └── referencias.md                  fontes oficiais do dia
-└── decks-build/                        scripts que geram os slides dos três dias
 ```
+
+Os decks e os scripts que os geram ficam em [`slides/`](../slides/), fora de `materiais/`: são o produto publicado, não material de sala.
+
+## O que a gestão leva do Momento 1
+
+[`gestao/entregaveis/`](gestao/entregaveis/): o que conferir em cada etapa · perguntas de aceite · **combinado da área** · vocabulário mínimo.
+
+O combinado é o único entregável produzido durante o encontro — os outros três são material de consulta. Ele precisa estar preenchido e compartilhado com as duplas **antes** do primeiro dia do Momento 2.
 
 ## O fio que atravessa os três dias
 
@@ -97,6 +120,6 @@ taskweather:todos:joao@empresa.com     → tarefas do João
 
 ## Slides
 
-Os três decks estão na raiz do repositório, em `.key` e `.pdf`: `apresentacao-dia-1`, `apresentacao-dia-2` e `apresentacao-dia-3`.
+Os decks estão em [`slides/`](../slides/), em `.key` e `.pdf`: `apresentacao-gestao` para o Momento 1 e `apresentacao-dia-1`, `apresentacao-dia-2` e `apresentacao-dia-3` para o Momento 2.
 
-Eles são gerados por script, com a identidade visual da skill `analytics-report-deck`. Para alterar um slide, edite o `build*.js` correspondente em [`decks-build/`](decks-build/) e reconstrua — o passo a passo está no [README de lá](decks-build/README.md).
+Eles são gerados por script, com a identidade visual da skill `analytics-report-deck`. Para alterar um slide, edite o `build*.js` correspondente em [`slides/build/`](../slides/build/) e regenere com `bash slides/build/gerar.sh <nome>` — o passo a passo está no [README de lá](../slides/build/README.md).

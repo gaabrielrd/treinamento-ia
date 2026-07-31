@@ -1,4 +1,4 @@
-# Roteiro completo — Dia 1  
+# Roteiro completo — Momento 2 · Dia 1  
 ## Processo de software, organização do projeto e qualidade local
 
 ## 1. Informações gerais
@@ -8,6 +8,7 @@
 - **Duração máxima:** 3 horas, utilizando os blocos opcionais.
 - **Formato:** predominantemente expositivo, com demonstrações curtas e um exercício guiado.
 - **Objetivo do dia:** ensinar um processo simples para transformar uma ideia em um projeto organizado antes de solicitar a geração de código.
+- **Pré-requisito:** o [Momento 1](../gestao/roteiro.md) já aconteceu e o [combinado da área](../gestao/entregaveis/03-combinado-da-area.md) está preenchido e compartilhado com a turma. É ele que diz quais artefatos são obrigatórios, quem aprova escopo e como a evidência chega até a gestão.
 
 ## 2. Resultados esperados
 
@@ -33,7 +34,8 @@ Antes da sessão:
 - preparar uma issue e um pull request de exemplo;
 - garantir que os slides tragam pouco texto e diagramas grandes;
 - manter um arquivo com a atividade final para copiar e distribuir;
-- pedir a cada dupla, com antecedência, **uma demanda pequena e real da área** para servir de projeto ao longo dos três dias;
+- reler o combinado da área e ter em mãos o que ficou obrigatório — a turma vai perguntar, e a resposta precisa ser a da própria gestão;
+- pedir a cada dupla, com antecedência, **uma demanda pequena e real da área** para servir de projeto ao longo dos três dias — no combinado do Momento 1 essas demandas já costumam estar listadas;
 - criar um repositório vazio por dupla, ou orientar como criar a partir do template.
 
 ## 4. Agenda-base
@@ -749,7 +751,7 @@ Os slides descrevem o que é falado. Estes três blocos descrevem o que a turma 
 
 Cada dupla recebe uma demanda real e pequena da área. O objetivo não é resolvê-la — é **defini-la**.
 
-Distribua [`materiais/dia-1/atividades/pratica-prd-da-dupla.md`](materiais/dia-1/atividades/pratica-prd-da-dupla.md) e peça que preencham as três primeiras seções: **problema**, **escopo** e **não escopo**.
+Distribua [`materiais/dia-1/atividades/pratica-prd-da-dupla.md`](atividades/pratica-prd-da-dupla.md) e peça que preencham as três primeiras seções: **problema**, **escopo** e **não escopo**.
 
 ### Como conduzir
 

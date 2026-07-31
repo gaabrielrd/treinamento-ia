@@ -1,4 +1,4 @@
-# Roteiro completo — Dia 2  
+# Roteiro completo — Momento 2 · Dia 2  
 ## Prompts, instruções persistentes, skills, MCP e escolha de modelo
 
 ## 1. Informações gerais
@@ -730,7 +730,7 @@ Cada dupla escreve um prompt de **planejamento** da primeira funcionalidade do p
 
 Quase toda dupla encontra uma. É o momento em que a turma passa de *aceitar o que o agente devolve* para *revisar o que o agente devolve* — que é a competência mais valiosa dos três dias.
 
-Material: [`materiais/dia-2/atividades/pratica-prompt-executado.md`](materiais/dia-2/atividades/pratica-prompt-executado.md).
+Material: [`materiais/dia-2/atividades/pratica-prompt-executado.md`](atividades/pratica-prompt-executado.md).
 
 ### Transição para o Bloco 4
 
@@ -757,7 +757,7 @@ A transição do Bloco 4 já entrega a pergunta: **o que eu vou digitar de novo 
 - tem regra que contradiz outra?
 - copiou grandes blocos de outro arquivo? Prefira referência a duplicação.
 
-Material: [`materiais/dia-2/atividades/pratica-agents-md.md`](materiais/dia-2/atividades/pratica-agents-md.md).
+Material: [`materiais/dia-2/atividades/pratica-agents-md.md`](atividades/pratica-agents-md.md).
 
 ### Resultado observável do Dia 2
 

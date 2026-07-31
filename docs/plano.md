@@ -14,7 +14,9 @@ O foco não será aprofundar conceitos de programação, mas estabelecer um proc
 - não dependam exclusivamente da conversa mantida com o agente;
 - sejam testadas antes de serem consideradas concluídas.
 
-Ao final dos três dias, os participantes deverão ser capazes de:
+A formação acontece em dois momentos: um encontro com a gestão, que define como a área vai acompanhar esses projetos, e três dias com quem vai implementar o processo.
+
+Ao final dos três dias do Momento 2, os participantes deverão ser capazes de:
 
 1. planejar uma aplicação antes de pedir que o agente escreva código;
 2. organizar requisitos, tarefas e critérios de aceite;
@@ -29,16 +31,34 @@ Ao final dos três dias, os participantes deverão ser capazes de:
 
 # Estrutura geral
 
+## Os dois momentos
+
+A formação é dividida em dois momentos, com públicos e objetivos distintos:
+
+| | **Momento 1 · Gestão** | **Momento 2 · Execução** |
+| --- | --- | --- |
+| Público | líderes de área e quem acompanha as entregas | quem vai implementar o processo no dia a dia |
+| Duração | 1 hora, encontro único | 3 encontros de 2 horas |
+| Formato | exposição curta, uma demonstração e um exercício em grupo | expositivo nos dois primeiros dias, prático no terceiro |
+| Objetivo | definir como a área acompanha projetos feitos com agentes | percorrer o processo inteiro, do problema à entrega validada |
+| Entregável | o combinado da área, preenchido em grupo | uma aplicação real da área, testada e documentada |
+
+**O Momento 1 acontece antes do Momento 2, sempre.** O que a gestão combina no primeiro encontro — quais artefatos são obrigatórios, quem aprova o quê, como a evidência chega — é a regra dentro da qual as duplas trabalham nos três dias. Sem esse combinado, o segundo momento produz artefatos que ninguém acordou em usar.
+
+O detalhamento do Momento 1 está na seção [Momento 1 · Gestão](#momento-1--gestão-como-acompanhar-projetos-feitos-com-agentes), logo abaixo. Os três dias do Momento 2 vêm em seguida.
+
 ## Duração
 
-- Duração planejada: **2 horas por dia**.
-- Duração máxima: **3 horas por dia**.
+- Momento 1: **1 hora**, encontro único.
+- Momento 2: **2 horas por dia**, três dias. Duração máxima de 3 horas por dia.
 - Dias 1 e 2: predominantemente expositivos, com pequenas demonstrações.
 - Dia 3: breve introdução e maior parte do tempo dedicada à prática.
 
 ## Público
 
-Pessoas que utilizam ou pretendem utilizar agentes de código, mesmo sem formação ou experiência prévia em desenvolvimento de software.
+**Momento 1:** líderes de área e quem acompanha as entregas do setor. Não é esperado nenhum conhecimento técnico.
+
+**Momento 2:** pessoas que utilizam ou pretendem utilizar agentes de código, mesmo sem formação ou experiência prévia em desenvolvimento de software.
 
 ## Abordagem
 
@@ -55,7 +75,70 @@ O treinamento deve priorizar perguntas como:
 
 ---
 
-# Dia 1 — Como organizar um projeto antes de gerar código
+# Momento 1 · Gestão — Como acompanhar projetos feitos com agentes
+
+## Objetivo do encontro
+
+Definir, com os líderes de área, como a área vai acompanhar e participar de projetos construídos com agentes de código. O encontro **não ensina a ferramenta**: ensina o que pedir, o que conferir e onde a gestão entra no processo.
+
+## Duração sugerida
+
+**1 hora**
+
+| Tempo  | Conteúdo                                                |
+| ------ | -------------------------------------------------------- |
+| 5 min  | Abertura: o que muda para a equipe e para a gestão       |
+| 10 min | Demonstração: um aplicativo que funciona e vaza dado     |
+| 10 min | O processo em cinco etapas, em linguagem de gestão       |
+| 15 min | Os quatro artefatos, o aceite de entrega e o gargalo     |
+| 15 min | Exercício: preencher o combinado da área                 |
+| 5 min  | O que acontece no Momento 2 e encerramento               |
+
+## Conteúdo
+
+### 1. O que muda
+
+Para a equipe, escrever antes: problema, escopo, critérios, regras do projeto. Para a gestão, aprovar no começo em vez de descobrir no fim. O trabalho da gestão não aumenta — muda de lugar.
+
+### 2. A demonstração
+
+A mesma aplicação desorganizada usada na abertura do Dia 1, com outra conclusão: o vazamento de dados entre usuários passa por qualquer aceite baseado em ver funcionando.
+
+### 3. O processo, pela pergunta da gestão
+
+| Etapa | A pergunta que a gestão faz |
+| ----- | --------------------------- |
+| Definir | Que problema isso resolve, e de quem? |
+| Especificar | Como saberemos que terminou? |
+| Dividir | Qual é a menor entrega que já tem valor? |
+| Implementar | O que está pronto e o que está em andamento? |
+| Validar | O que foi validado, e como? |
+
+Nenhuma dessas perguntas exige conhecimento técnico.
+
+### 4. Os quatro artefatos
+
+Escopo e não escopo · critérios de aceite · regras do projeto (`AGENTS.md`) · registro de entrega. Para cada um, o que a gestão confere está em [`materiais/gestao/entregaveis/01-o-que-conferir-em-cada-etapa.md`](../materiais/gestao/entregaveis/01-o-que-conferir-em-cada-etapa.md).
+
+### 5. Aceite e acompanhamento
+
+As cinco perguntas de aceite, o que não vale a pena perguntar, e a regra de entrada da gestão: **no começo e no fim de cada incremento, não no meio**. Se um projeto precisa de aprovação a cada passo, o escopo estava grande demais.
+
+### 6. O combinado da área
+
+O entregável do encontro, preenchido em grupo: o que passa a ser obrigatório, quem decide o quê e em quanto tempo, onde a evidência fica, os limites da área, quem participa do Momento 2 e como saberemos que valeu. Modelo em [`materiais/gestao/entregaveis/03-combinado-da-area.md`](../materiais/gestao/entregaveis/03-combinado-da-area.md).
+
+## Resultado observável
+
+O combinado sai preenchido do encontro. Se sair em branco, o encontro não atingiu o objetivo — remarcar o bloco antes de iniciar o Momento 2.
+
+## Materiais
+
+Guia do instrutor em [`materiais/gestao/README.md`](../materiais/gestao/README.md), roteiro slide a slide em [`../materiais/gestao/roteiro.md`](../materiais/gestao/roteiro.md), slides em [`slides/apresentacao-gestao.key`](../slides/).
+
+---
+
+# Momento 2 · Dia 1 — Como organizar um projeto antes de gerar código
 
 ## Objetivo do dia
 
@@ -361,7 +444,7 @@ Uma tarefa está concluída quando:
 
 ---
 
-# Dia 2 — Como orientar e configurar agentes de código
+# Momento 2 · Dia 2 — Como orientar e configurar agentes de código
 
 ## Objetivo do dia
 
@@ -670,7 +753,7 @@ Quanto maior a ambiguidade, o impacto e a quantidade de arquivos envolvidos, mai
 
 ---
 
-# Dia 3 — Construção prática de uma aplicação
+# Momento 2 · Dia 3 — Construção prática de uma aplicação
 
 ## Objetivo do dia
 
@@ -1002,6 +1085,21 @@ Gera um resumo das alterações e instruções de teste.
 
 # Critérios de sucesso da formação
 
+## Momento 1 · Gestão
+
+Ao final do encontro, a área deverá ter:
+
+- o combinado preenchido, com os artefatos obrigatórios definidos;
+- um dono e um prazo de resposta para cada tipo de decisão;
+- o lugar onde os artefatos ficam e o que a gestão recebe a cada entrega;
+- os limites da área quanto a dado de pessoa, credenciais e integrações;
+- os nomes das duplas do Momento 2 e a demanda real de cada uma;
+- até três sinais observáveis e a data de revisão.
+
+E cada líder deverá conseguir conduzir um aceite de entrega sem fazer nenhuma pergunta técnica.
+
+## Momento 2 · Execução
+
 Ao final, o participante deverá demonstrar que consegue:
 
 - explicar o objetivo do projeto antes de gerar código;
@@ -1022,7 +1120,15 @@ O objetivo não será avaliar qualidade avançada de programação, mas a capaci
 
 # Preparação do instrutor
 
-Antes da formação:
+Antes do Momento 1:
+
+1. deixar a aplicação desorganizada rodando, com uma tarefa já criada por `ana@empresa.com`;
+2. abrir o PRD e o `AGENTS.md` do projeto organizado em abas separadas;
+3. imprimir ou compartilhar os entregáveis da gestão;
+4. abrir o combinado da área em uma tela editável, para preencher ao vivo;
+5. confirmar a presença dos líderes — o encontro rende mais com todos juntos do que repetido área a área.
+
+Antes do Momento 2:
 
 1. criar o repositório-template;
 2. configurar a estrutura inicial;
@@ -1059,3 +1165,5 @@ Ideia
 ```
 
 O principal resultado não será a aplicação criada no terceiro dia, mas a adoção de um processo comum que possa ser reutilizado no trabalho cotidiano.
+
+Do lado da gestão, o resultado equivalente é o combinado da área: o padrão deixa de depender de quem conduziu a formação e passa a ser a regra pela qual a área aprova escopo, acompanha o andamento e aceita entregas.

@@ -1,4 +1,6 @@
-# Materiais do Dia 2 — guia do instrutor
+# Materiais do Momento 2 · Dia 2 — guia do instrutor
+
+Roteiro slide a slide deste dia: [`roteiro.md`](roteiro.md). Regras do repositório: [`AGENTS.md`](../../AGENTS.md).
 
 **Tema:** prompts, instruções persistentes, skills, MCP e escolha de modelo.
 

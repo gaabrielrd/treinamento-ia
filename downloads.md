@@ -2,35 +2,65 @@
 
 Tudo que é apresentado no treinamento está aqui. Os slides abrem em PDF; os entregáveis podem ser lidos no site ou impressos direto do navegador.
 
-## Slides
+A formação tem dois momentos: **Momento 1**, de 1 hora, com a gestão; e **Momento 2**, de três encontros de 2 horas, com quem vai implementar.
+
+## Slides — Momento 1 · Gestão
 
 <div class="downloads">
-  <a href="/apresentacao-dia-1.pdf" download>
+  <a href="/slides/apresentacao-gestao.pdf" download>
+    <strong>Momento 1 — PDF</strong>
+    <span>Como acompanhar projetos feitos com agentes · 10 slides</span>
+  </a>
+</div>
+
+## Slides — Momento 2 · Execução
+
+<div class="downloads">
+  <a href="/slides/apresentacao-dia-1.pdf" download>
     <strong>Dia 1 — PDF</strong>
     <span>Processo, organização e qualidade local · 17 slides</span>
   </a>
-  <a href="/apresentacao-dia-2.pdf" download>
+  <a href="/slides/apresentacao-dia-2.pdf" download>
     <strong>Dia 2 — PDF</strong>
     <span>Prompts, contexto persistente, skills e MCP · 16 slides</span>
   </a>
-  <a href="/apresentacao-dia-3.pdf" download>
+  <a href="/slides/apresentacao-dia-3.pdf" download>
     <strong>Dia 3 — PDF</strong>
     <span>Prática: construir o TaskWeather · 13 slides</span>
   </a>
 </div>
 
-As versões editáveis em Keynote estão no repositório: `apresentacao-dia-1.key`, `-2` e `-3`.
+As versões editáveis em Keynote estão em [`slides/`](https://github.com/gaabrielrd/treinamento-ia/tree/master/slides), junto com os scripts que as geram.
 
-### Apresentação da proposta
+### Apresentações da proposta
+
+Não fazem parte da formação: servem para apresentar e validar a proposta antes de ela acontecer.
 
 <div class="downloads">
-  <a href="/apresentacao-gerencia.pdf" download>
+  <a href="/slides/apresentacao-lideres.pdf" download>
     <strong>Motivação e objetivos — PDF</strong>
     <span>Para apresentar a proposta do treinamento · 9 slides</span>
   </a>
+  <a href="/slides/apresentacao-lideres-areas.pdf" download>
+    <strong>Proposta às áreas — PDF</strong>
+    <span>Para validar com os líderes de cada área: valor, formato em dois momentos · 14 slides</span>
+  </a>
 </div>
 
-## Entregáveis do Dia 1
+## Entregáveis do Momento 1 · Gestão
+
+O que a gestão leva do encontro. O **combinado da área** é preenchido em grupo, durante a sessão.
+
+| Material | Para que serve |
+| -------- | -------------- |
+| [O que conferir em cada etapa](/materiais/gestao/entregaveis/01-o-que-conferir-em-cada-etapa.md) | a pergunta e o sinal de alerta de cada etapa do processo |
+| [Perguntas de aceite](/materiais/gestao/entregaveis/02-perguntas-de-aceite.md) | o que perguntar quando alguém disser "está pronto" |
+| [Combinado da área](/materiais/gestao/entregaveis/03-combinado-da-area.md) | o modelo preenchido no encontro: quem decide o quê, o que é obrigatório |
+| [Vocabulário mínimo](/materiais/gestao/entregaveis/04-vocabulario-minimo.md) | os termos das conversas, em linguagem de gestão |
+
+Guia do encontro: [`materiais/gestao/README.md`](/materiais/gestao/README.md) · roteiro completo: [`materiais/gestao/roteiro.md`](/materiais/gestao/roteiro.md) · [referências](/materiais/gestao/referencias.md).
+
+## Entregáveis do Momento 2 · Dia 1
 
 O que você leva para aplicar no próximo projeto.
 
@@ -46,7 +76,7 @@ O que você leva para aplicar no próximo projeto.
 
 Folha da prática do dia: [PRD da dupla](/materiais/dia-1/atividades/pratica-prd-da-dupla.md).
 
-## Entregáveis do Dia 2
+## Entregáveis do Momento 2 · Dia 2
 
 | Material | Para que serve |
 | -------- | -------------- |
@@ -59,7 +89,7 @@ Folha da prática do dia: [PRD da dupla](/materiais/dia-1/atividades/pratica-prd
 
 Folhas das práticas: [prompt executado](/materiais/dia-2/atividades/pratica-prompt-executado.md) · [`AGENTS.md` do projeto](/materiais/dia-2/atividades/pratica-agents-md.md).
 
-## Entregáveis do Dia 3
+## Entregáveis do Momento 2 · Dia 3
 
 | Material | Para que serve |
 | -------- | -------------- |
@@ -68,10 +98,11 @@ Folhas das práticas: [prompt executado](/materiais/dia-2/atividades/pratica-pro
 | [Modelo de pull request](/materiais/dia-3/entregaveis/modelo-pull-request.md) | como descrever a entrega no fim |
 | [Checkpoints e critérios](/materiais/dia-3/entregaveis/checkpoints-e-criterios.md) | o que precisa estar pronto em cada etapa |
 
-## Referências por dia
+## Referências
 
-As fontes oficiais para aprofundar, organizadas por bloco do dia.
+As fontes oficiais para aprofundar, organizadas por bloco.
 
+- [Momento 1 · Gestão](/materiais/gestao/referencias.md) — os dois estudos de produtividade, contexto de repositório e governança
 - [Dia 1](/materiais/dia-1/referencias.md) — GitHub, Git, estrutura de projeto e validação local
 - [Dia 2](/materiais/dia-2/referencias.md) — prompting, `AGENTS.md`, skills, MCP e escolha de modelo
 - [Dia 3](/materiais/dia-3/referencias.md) — Vite, React, TypeScript, Open-Meteo, testes

@@ -9,6 +9,11 @@
 /*.md
   Cache-Control: public, max-age=0, must-revalidate
 
+# Os decks moram em slides/ desde a reorganização; a regra explícita evita
+# depender do casamento de `*` com barras.
+/slides/*
+  Cache-Control: public, max-age=3600
+
 /*.pdf
   Cache-Control: public, max-age=3600
   Content-Disposition: inline

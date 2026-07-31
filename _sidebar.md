@@ -1,10 +1,21 @@
 - [Início](/)
 - [Baixar os materiais](/downloads.md)
 
-- **Dia 1 · Processo e organização**
+- **Momento 1 · Gestão**
+
+  - [Guia do encontro](/materiais/gestao/README.md)
+  - [Roteiro completo](/materiais/gestao/roteiro.md)
+  - [Referências](/materiais/gestao/referencias.md)
+  - Entregáveis
+    - [1. O que conferir em cada etapa](/materiais/gestao/entregaveis/01-o-que-conferir-em-cada-etapa.md)
+    - [2. Perguntas de aceite](/materiais/gestao/entregaveis/02-perguntas-de-aceite.md)
+    - [3. Combinado da área](/materiais/gestao/entregaveis/03-combinado-da-area.md)
+    - [4. Vocabulário mínimo](/materiais/gestao/entregaveis/04-vocabulario-minimo.md)
+
+- **Momento 2 · Dia 1 · Processo e organização**
 
   - [Guia do dia](/materiais/dia-1/README.md)
-  - [Roteiro completo](/roteiro-dia-1.md)
+  - [Roteiro completo](/materiais/dia-1/roteiro.md)
   - [Referências](/materiais/dia-1/referencias.md)
   - Entregáveis
     - [1. Definição do problema](/materiais/dia-1/entregaveis/01-checklist-definicao-problema.md)
@@ -21,10 +32,10 @@
     - [Issue](/materiais/dia-1/github-exemplos/issue-exemplo.md)
     - [Pull request](/materiais/dia-1/github-exemplos/pull-request-exemplo.md)
 
-- **Dia 2 · Orientar o agente**
+- **Momento 2 · Dia 2 · Orientar o agente**
 
   - [Guia do dia](/materiais/dia-2/README.md)
-  - [Roteiro completo](/roteiro-dia-2.md)
+  - [Roteiro completo](/materiais/dia-2/roteiro.md)
   - [Referências](/materiais/dia-2/referencias.md)
   - Entregáveis
     - [1. Template de prompt](/materiais/dia-2/entregaveis/01-template-de-prompt.md)
@@ -44,10 +55,10 @@
     - [Alteração guiada](/materiais/dia-2/demonstracoes/03-alteracao-guiada.md)
     - [MCP somente leitura](/materiais/dia-2/demonstracoes/04-mcp-somente-leitura.md)
 
-- **Dia 3 · Prática**
+- **Momento 2 · Dia 3 · Prática**
 
   - [Guia do dia](/materiais/dia-3/README.md)
-  - [Roteiro completo](/roteiro-dia-3.md)
+  - [Roteiro completo](/materiais/dia-3/roteiro.md)
   - [Referências](/materiais/dia-3/referencias.md)
   - [Prompts para copiar](/materiais/dia-3/prompts/prompts-para-copiar.md)
   - Entregáveis
@@ -72,7 +83,16 @@
 
 - **Sobre o treinamento**
 
+  - [Plano da formação](/docs/plano.md)
   - [Índice dos materiais](/materiais/README.md)
-  - [Análise crítica do desenho](/analise-critica.md)
-  - [Como os slides são gerados](/materiais/decks-build/README.md)
-  - [Planejamento do template](/planejamento-repositorio-template.md)
+
+- **Este repositório**
+
+  - [Estrutura dos arquivos](/docs/estrutura.md)
+  - [Fluxo de trabalho](/docs/fluxo-de-trabalho.md)
+  - [Definição de concluído](/docs/definicao-de-concluido.md)
+  - [Decisões registradas](/docs/decisoes.md)
+  - [Regras para agentes](/AGENTS.md)
+  - [Como os slides são gerados](/slides/build/README.md)
+  - [Decisões do template](/docs/decisoes-do-template.md)
+  - [Publicação do site](/docs/publicacao.md)

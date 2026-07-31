@@ -1,4 +1,6 @@
-# Materiais do Dia 1 — guia do instrutor
+# Materiais do Momento 2 · Dia 1 — guia do instrutor
+
+Roteiro slide a slide deste dia: [`roteiro.md`](roteiro.md). Regras do repositório: [`AGENTS.md`](../../AGENTS.md).
 
 Dois projetos com **exatamente o mesmo produto** e as mesmas funcionalidades. A única diferença é a organização. Isso é intencional: o contraste que a turma vê não é "um faz mais coisas", é "um dá para continuar, o outro não".
 

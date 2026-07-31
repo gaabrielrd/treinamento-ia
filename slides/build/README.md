@@ -1,15 +1,18 @@
 # Geração dos decks
 
-Os três decks do treinamento (`apresentacao-dia-1`, `-2` e `-3`, na raiz do repositório) são gerados por script, não editados à mão no Keynote. Isso mantém os três consistentes e torna qualquer alteração rastreável.
+Os decks publicados em [`slides/`](../) são gerados por script, não editados à mão no Keynote. Isso mantém todos consistentes e torna qualquer alteração rastreável.
 
 ## Arquivos
 
 | Arquivo         | O que é                                                                       |
 | --------------- | ----------------------------------------------------------------------------- |
-| `build1.js`     | conteúdo do deck do Dia 1 — 17 slides                                          |
-| `build2.js`     | conteúdo do deck do Dia 2 — 16 slides                                          |
-| `build3.js`     | conteúdo do deck do Dia 3 — 13 slides                                          |
-| `build-gerencia.js` | deck de motivação e objetivos, para apresentar a proposta — 9 slides       |
+| `gerar.sh`      | gera um deck do começo ao fim e publica em `slides/`                           |
+| `build-gestao.js` | deck do **Momento 1 · Gestão** — 10 slides                                   |
+| `build1.js`     | **Momento 2 · Dia 1** — 17 slides                                              |
+| `build2.js`     | **Momento 2 · Dia 2** — 16 slides                                              |
+| `build3.js`     | **Momento 2 · Dia 3** — 13 slides                                              |
+| `build-lideres.js` | deck de motivação e objetivos, para apresentar a proposta — 9 slides            |
+| `build-lideres-areas.js` | deck de proposta aos líderes de cada área, para validação — 14 slides     |
 | `common.js`     | padrões de layout desta série (cards, checklists, blocos de código, colunas)   |
 | `export_pdf.sh` | exporta um `.key` para `.pdf` via Keynote                                       |
 
@@ -24,28 +27,20 @@ A identidade visual (paleta, tipografia, grid, animações) vem da skill `analyt
 
 1. Localize o slide no `build*.js` — os comentários marcam cada um (`// ---------------- 05 · Escopo ----------------`).
 2. Edite o conteúdo.
-3. Reconstrua:
+3. Regenere, da raiz do repositório:
 
 ```bash
-cd materiais/decks-build
-npm install pptxgenjs
-S=/Users/gaabrielrd/Dev/vitru/analytics/.claude/skills/analytics-report-deck
-
-node build1.js                                              # gera deck1.pptx
-python3 $S/scripts/animate.py deck1.pptx deck1_anim.pptx     # injeta as animações
-bash $S/scripts/to_keynote.sh "$PWD/deck1_anim.pptx" "$PWD/deck1.key" "$PWD/qa1"
-bash export_pdf.sh "$PWD/deck1.key" "$PWD/deck1.pdf"
+bash slides/build/gerar.sh dia-1
 ```
 
-4. Confira as imagens em `qa1/` — uma por slide — procurando texto cortado, sobreposição ou estouro de card.
-5. Copie o resultado para a raiz:
+Nomes aceitos: `dia-1`, `dia-2`, `dia-3`, `gestao`, `lideres`, `lideres-areas`.
 
-```bash
-cp deck1.key ../../apresentacao-dia-1.key
-cp deck1.pdf ../../apresentacao-dia-1.pdf
-```
+O script monta o PPTX, injeta as animações, converte para Keynote, exporta o PDF, publica os dois em `slides/` e informa quantos slides saíram e onde estão as imagens de QA. Os intermediários são apagados no fim; `npm install pptxgenjs` roda sozinho na primeira vez.
 
-Troque `1` por `2` ou `3` para os outros dias. O `.pptx` e o `.pptx` animado são intermediários — não precisam ser versionados.
+4. Confira as imagens em `qa-<nome>/` — uma por slide — procurando texto cortado, sobreposição ou estouro de card.
+5. Confira se o roteiro daquele encontro ainda bate com o slide, e rode `python3 scripts/validar.py`.
+
+As etapas individuais continuam disponíveis, se precisar depurar uma delas: leia o `gerar.sh`, que é curto e comentado.
 
 ## Por que o caminho passa por PPTX
 

@@ -9,8 +9,8 @@ const cap = K.bannerSlide(p, {
   titleRuns: [["Usando IA: ", "dark"], ["da concepção à entrega", "purple"]],
   subtitle:
     "Um processo comum para transformar ideias em aplicações organizadas com agentes de código.\nFormação para pessoas que usam IA para construir software sem serem desenvolvedoras.",
-  strip: ["3 DIAS", "→", "2H POR DIA", "→", "MATERIAIS PRONTOS", "→", "PEDIDO: TURMA PILOTO"],
-  dateLabel: "Apresentação à gerência",
+  strip: ["3 DIAS", "→", "2H POR DIA", "→", "MATERIAIS PRONTOS"],
+  dateLabel: "Apresentação à liderança",
 });
 cap.addNotes(
   "Abertura em uma frase: o time já usa agentes de código. O que falta não é ferramenta, é processo. Esta proposta pede aprovação de uma turma piloto — os materiais já estão prontos."
@@ -106,7 +106,7 @@ s2.addText(
   }
 );
 s2.addNotes(
-  "Este é o momento mais forte do treinamento e o melhor argumento para a gerência: o defeito é invisível em qualquer demonstração e aparece só quando uma segunda pessoa usa o sistema."
+  "Este é o momento mais forte do treinamento e o melhor argumento para a liderança: o defeito é invisível em qualquer demonstração e aparece só quando uma segunda pessoa usa o sistema."
 );
 
 // ---------------- 03 · EVIDÊNCIA ----------------
@@ -280,7 +280,7 @@ C.infoCard(
   { tag: "Sem custo de produção", bodySize: 13, gap: 8, bodyColor: T.GRAY }
 );
 s6.addNotes(
-  "Ponto importante para a gerência: o material está construído e validado. O que se pede é agenda das pessoas, não orçamento de produção."
+  "Ponto importante para a liderança: o material está construído e validado. O que se pede é agenda das pessoas, não orçamento de produção."
 );
 
 // ---------------- 07 · RETORNO ----------------
@@ -339,7 +339,7 @@ s7.addNotes(
 
 // ---------------- FECHO ----------------
 const fim = K.bannerSlide(p, {
-  kicker: "Próximo passo",
+  kicker: "Próximos passos",
   titleRuns: [["Aprovar uma ", "dark"], ["turma piloto", "purple"]],
   bulletList: [
     "Definir data dos três encontros e liberar a agenda dos participantes",
@@ -353,4 +353,4 @@ fim.addNotes(
   "Fechar pedindo a decisão concreta: data e lista de participantes. O restante está pronto. Sugerir também um encontro curto de reforço duas a três semanas depois, em que cada pessoa mostra um projeto real onde aplicou o processo."
 );
 
-K.save(p, process.argv[2] || "deck-gerencia.pptx").then((f) => console.log("OK", f));
+K.save(p, process.argv[2] || "deck-lideres.pptx").then((f) => console.log("OK", f));

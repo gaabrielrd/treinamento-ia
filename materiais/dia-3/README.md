@@ -1,4 +1,6 @@
-# Materiais do Dia 3 — guia do instrutor
+# Materiais do Momento 2 · Dia 3 — guia do instrutor
+
+Roteiro slide a slide deste dia: [`roteiro.md`](roteiro.md). Regras do repositório: [`AGENTS.md`](../../AGENTS.md).
 
 **Tema:** prática — criação da aplicação TaskWeather com agentes de código.
 
