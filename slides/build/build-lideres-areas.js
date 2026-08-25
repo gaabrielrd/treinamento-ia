@@ -678,6 +678,47 @@ s12.addNotes(
   "Este é o argumento coletivo: o retorno cresce quanto mais áreas adotam o mesmo padrão, porque o custo de atravessar de uma área para outra cai."
 );
 
+// ---------------- 13 · INDICAÇÃO DA EQUIPE ----------------
+const s13 = K.contentSlide(
+  p,
+  14,
+  "13 · Indicação da equipe",
+  "O próximo passo é do gestor: indicar quem participa",
+  "Com base no que foi combinado neste encontro: duplas, três encontros de duas horas, demanda real da área."
+);
+tc = C.twoCol(2.5);
+C.infoCard(
+  s13,
+  tc.xL,
+  tc.y,
+  tc.w,
+  3.4,
+  "O que já ficou combinado",
+  [
+    "3 encontros de 2 horas, com intervalo entre eles",
+    "Duplas: uma pessoa conduz o agente, a outra acompanha escopo e critérios",
+    "Cada dupla traz uma demanda pequena e real da área",
+  ],
+  { tag: "Momento 2 · a equipe", accent: true, bodySize: 13, gap: 9 }
+);
+C.infoCard(
+  s13,
+  tc.xR,
+  tc.y,
+  tc.w,
+  3.4,
+  "Como indicar sua equipe",
+  [
+    "O gestor indica os membros da equipe que vão compor as duplas",
+    "Formulário de indicação: [A CONFIRMAR]",
+    "Dúvidas: [A CONFIRMAR: contato responsável]",
+  ],
+  { bodySize: 13, gap: 9, bodyColor: T.GRAY }
+);
+s13.addNotes(
+  "Placeholder: preencher o link do formulário de indicação e o contato responsável assim que estiverem definidos. Este slide existe para que o pedido de indicação ao gestor saia no mesmo material apresentado aos líderes. O convite direto aos colaboradores indicados é um passo posterior, feito depois que o gestor preenche o formulário."
+);
+
 // ---------------- FECHO ----------------
 const fim = K.bannerSlide(p, {
   kicker: "O que queremos validar com vocês",
